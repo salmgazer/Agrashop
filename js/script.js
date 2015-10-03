@@ -67,12 +67,16 @@ function signIn(){
     print(" Welcome " + getUsername());
     }
 
-function getUsername(){
-    strUrl = "controller/controller.php?cmd=2";
-    objResult = sendRequest(strUrl);
+function getUserDetails(){
+    var strUrl = "controller/controller.php?cmd=2";
+    var objResult = sendRequest(strUrl);
+
     if(objResult.result == 0){
+        alert("nothing");
+        alert(objResult.message);
         window.location.href = "index.html";
         return;
     }
-    return objResult.username;
+    alert(objResult.username+"  "+objResult.user_type);
+    return;
 }

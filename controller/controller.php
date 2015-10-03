@@ -16,7 +16,7 @@ switch($cmd) {
         signIn();
         break;
     case 2:
-        getUsername();
+        getUserDetails();
         break;
 
     default:
@@ -37,6 +37,9 @@ function signIn(){
 
     if($user_type == "1"){
         if($member->signInShopkeeper($username, $password)){
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['user_type'] = $user_type;
             echo '{"result": 1, "message": "Signed in successfully as shopkeeper"}';
             return;
         }else{
@@ -46,6 +49,9 @@ function signIn(){
     }
     else if($user_type == "2"){
         if($member->signInAdmin($username, $password)){
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['user_type'] = $user_type;
             echo '{"result": 1, "message": "Signed in successfully as admin"}';
             return;
         }else{
@@ -56,12 +62,12 @@ function signIn(){
 
 }
 
-function getUsername(){
+function getUserDetails(){
     if(isset($_SESSION['username']) && isset($_SESSION['password']) && isset($_SESSION['user_type'])){
-        echo '{"result": 1, "username": '.$_SESSION['username'].'"}';
+        echo '{"result": 1, "username": "'.$_SESSION['username'].'", "user_type": "'.$_SESSION['user_type'].'"}';
         return;
     }
-    session_destroy();
+   // session_destroy();
     echo '{"result": 0, "message": "You need to sign in first"}';
     return;
 }
