@@ -16,9 +16,11 @@ switch($cmd) {
         signIn();
         break;
     case 2:
-        getUsername();
+        getUserDetails();
         break;
-
+    case 3:
+        getBooks();
+        break;
     default:
         echo '{"result":0, message:"unknown command"}';
         break;
@@ -37,6 +39,9 @@ function signIn(){
 
     if($user_type == "1"){
         if($member->signInShopkeeper($username, $password)){
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['user_type'] = $user_type;
             echo '{"result": 1, "message": "Signed in successfully as shopkeeper"}';
             return;
         }else{
@@ -46,6 +51,9 @@ function signIn(){
     }
     else if($user_type == "2"){
         if($member->signInAdmin($username, $password)){
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['user_type'] = $user_type;
             echo '{"result": 1, "message": "Signed in successfully as admin"}';
             return;
         }else{
@@ -56,12 +64,34 @@ function signIn(){
 
 }
 
-function getUsername(){
+function getUserDetails(){
     if(isset($_SESSION['username']) && isset($_SESSION['password']) && isset($_SESSION['user_type'])){
-        echo '{"result": 1, "username": '.$_SESSION['username'].'"}';
+        echo '{"result": 1, "username": "'.$_SESSION['username'].'", "user_type": "'.$_SESSION['user_type'].'"}';
         return;
     }
-    session_destroy();
+   // session_destroy();
     echo '{"result": 0, "message": "You need to sign in first"}';
     return;
 }
+
+function getBooks(){
+    include "../model/Book.php";
+
+    $book = new Book();
+    $books = $book->getBooks();
+    if(!$books){
+        echo '{"result": 0, "message": "No books yet"}';
+        return;
+    }
+    echo '{"result": 1, "books": [';
+    while($books){
+        echo json_encode($books);
+        $books = $book->fetch();
+        if($books){
+            echo ",";
+        }
+    }
+    echo ']}';
+    return;
+}
+

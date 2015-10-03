@@ -67,12 +67,34 @@ function signIn(){
     print(" Welcome " + getUsername());
     }
 
-function getUsername(){
-    strUrl = "controller/controller.php?cmd=2";
-    objResult = sendRequest(strUrl);
+function getUserDetails(){
+    var strUrl = "controller/controller.php?cmd=2";
+    var objResult = sendRequest(strUrl);
+
     if(objResult.result == 0){
+        alert("nothing");
+        alert(objResult.message);
         window.location.href = "index.html";
         return;
     }
-    return objResult.username;
+    alert(objResult.username+"  "+objResult.user_type);
+    return;
+}
+
+function getBooks(){
+    var strUrl = "controller/controller.php?cmd=3";
+    var objResult = sendRequest(strUrl);
+
+    if(objResult.result == 0){
+        alert("no books");
+        return;
+    }
+    var books = objResult.books;
+    for(i = 0; i < books.length; i++){
+        var singleBook = document.createElement("div");
+
+        singleBook.innerHTML = '<div class="col-sm-2" style="margin-bottom: 50px;"><div class="book-content"><img src="" class="book_cover" /><h5 class="book-title">'+books[i]['title']+'</h5><h6 class="author"><span class="author-icon"> </span> Author: <span>'+books[i]['author']+'</span></h6><h6 class="publisher">Publisher: <span>'+books[i]['publisher']+'</span></h6><h6 class="book-subject">Subject: <span>'+books[i]['subject']+'</span></h6><h5 class="quantity">Quantity: <span>'+books[i]['quantity']+'</span></h5><h6>Retail: <span class="retail_price"> GH¢'+books[i]['retail_price']+'</span></h6><h6>Wholesale: <span class="wholesale_price"> GH¢'+books[i]['wholesale_price']+'</span></h6><div><a href="" class="btn btn-default update-book"> Update Book</a><a href="" class="btn btn-default sell-book">Sell Book</a></div></div></div><div id="nextbook"></div>';
+
+        document.getElementById("books").appendChild(singleBook);
+    }
 }
