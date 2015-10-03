@@ -27,62 +27,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="Book.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/Book.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.46735394">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1443912505411" expanded="true" signature="100:118" placeholder="SELECT * FRO..book..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/jquery.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="65" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="65" />
-              <folding>
-                <element signature="e#654#1297#0#PHP" expanded="false" />
-                <element signature="e#986#1297#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -90,7 +42,7 @@
       <file leaf-file-name="Member.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Member.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="1.9615384">
               <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding>
                 <element signature="e#7#89#0#PHP" expanded="true" />
@@ -101,24 +53,24 @@
                 <element signature="n#signInAdmin#0;n#Member#0;n#!!top" expanded="false" />
                 <element signature="n#checkShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
                 <element signature="n#checkAdmin#0;n#Member#0;n#!!top" expanded="false" />
-                <marker date="1441493715591" expanded="true" signature="228:292" placeholder="SELECT * fro..shopadmin..." />
-                <marker date="1441493715591" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
-                <marker date="1441493715591" expanded="true" signature="931:1045" placeholder="INSERT INTO ..." />
-                <marker date="1441493715591" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
-                <marker date="1441493715591" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
-                <marker date="1441493715591" expanded="true" signature="1875:1888" placeholder="SELECT * FRO..." />
-                <marker date="1441493715591" expanded="true" signature="1875:1950" placeholder="SELECT * FRO..shopkeeper..." />
-                <marker date="1441493715591" expanded="true" signature="1875:1999" placeholder="SELECT * FRO..shopkeeper..." />
-                <marker date="1441493715591" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
-                <marker date="1441493715591" expanded="true" signature="2419:2467" placeholder="SELECT * FRO..ahopadmin..." />
-                <marker date="1441493715591" expanded="true" signature="2419:2487" placeholder="SELECT * FRO..ahopadmin..." />
-                <marker date="1441493715591" expanded="true" signature="2419:2488" placeholder="SELECT * FRO..ahopadmin..." />
-                <marker date="1441493715591" expanded="true" signature="2419:2522" placeholder="SELECT * FRO..ahopadmin..." />
-                <marker date="1441493715591" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..ahopadmin..." />
-                <marker date="1441493715591" expanded="true" signature="2920:2995" placeholder="SELECT * FRO..shopkeeper..." />
-                <marker date="1441493715591" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
-                <marker date="1441493715591" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
+                <marker date="1443900434907" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
+                <marker date="1443900434907" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
+                <marker date="1443900434907" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
+                <marker date="1443900434907" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
+                <marker date="1443900434907" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..shopadmin..." />
+                <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
+                <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.615385">
+              <caret line="85" column="36" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,8 +95,10 @@
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/model/Member.php" />
-        <option value="$PROJECT_DIR$/controller/controller.php" />
         <option value="$PROJECT_DIR$/js/script.js" />
+        <option value="$PROJECT_DIR$/js/jquery.js" />
+        <option value="$PROJECT_DIR$/model/Book.php" />
+        <option value="$PROJECT_DIR$/controller/controller.php" />
       </list>
     </option>
   </component>
@@ -187,7 +141,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -216,6 +169,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Agrashop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Agrashop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Agrashop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Agrashop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -223,6 +204,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,9 +260,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="745" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -335,8 +317,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -344,9 +325,19 @@
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -355,10 +346,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="65" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="65" />
-          <folding>
-            <element signature="e#654#1297#0#PHP" expanded="false" />
-            <element signature="e#986#1297#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -383,23 +371,13 @@
             <element signature="n#signInAdmin#0;n#Member#0;n#!!top" expanded="false" />
             <element signature="n#checkShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
             <element signature="n#checkAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <marker date="1441493715591" expanded="true" signature="228:292" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="931:1045" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1888" placeholder="SELECT * FRO..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1950" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1999" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2467" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2487" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2488" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2522" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2920:2995" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
           </folding>
         </state>
       </provider>
@@ -409,8 +387,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -429,10 +406,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="65" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="65" />
-          <folding>
-            <element signature="e#654#1297#0#PHP" expanded="false" />
-            <element signature="e#986#1297#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -457,23 +431,13 @@
             <element signature="n#signInAdmin#0;n#Member#0;n#!!top" expanded="false" />
             <element signature="n#checkShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
             <element signature="n#checkAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <marker date="1441493715591" expanded="true" signature="228:292" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="931:1045" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1888" placeholder="SELECT * FRO..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1950" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1999" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2467" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2487" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2488" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2522" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2920:2995" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
           </folding>
         </state>
       </provider>
@@ -483,8 +447,67 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="65" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Member.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <element signature="e#7#89#0#PHP" expanded="true" />
+            <element signature="n#checkAdminPass#0;n#Member#0;n#!!top" expanded="false" />
+            <element signature="n#addShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
+            <element signature="n#addAdmin#0;n#Member#0;n#!!top" expanded="false" />
+            <element signature="n#signInShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
+            <element signature="n#signInAdmin#0;n#Member#0;n#!!top" expanded="false" />
+            <element signature="n#checkShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
+            <element signature="n#checkAdmin#0;n#Member#0;n#!!top" expanded="false" />
+            <marker date="1443900434907" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -503,10 +526,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#654#1297#0#PHP" expanded="false" />
-            <element signature="e#986#1297#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -523,23 +543,13 @@
             <element signature="n#signInAdmin#0;n#Member#0;n#!!top" expanded="false" />
             <element signature="n#checkShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
             <element signature="n#checkAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <marker date="1441493715591" expanded="true" signature="228:292" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="931:1045" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1888" placeholder="SELECT * FRO..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1950" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1999" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2467" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2487" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2488" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2522" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2920:2995" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
           </folding>
         </state>
       </provider>
@@ -565,20 +575,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029259896">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5246711">
+          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7079038">
           <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.615385">
+          <caret line="85" column="36" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Member.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="1.9615384">
           <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding>
             <element signature="e#7#89#0#PHP" expanded="true" />
@@ -589,62 +634,23 @@
             <element signature="n#signInAdmin#0;n#Member#0;n#!!top" expanded="false" />
             <element signature="n#checkShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
             <element signature="n#checkAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <marker date="1441493715591" expanded="true" signature="228:292" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="931:1045" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1888" placeholder="SELECT * FRO..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1950" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="1875:1999" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2467" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2487" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2488" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2522" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..ahopadmin..." />
-            <marker date="1441493715591" expanded="true" signature="2920:2995" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1441493715591" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
+            <marker date="1443900434907" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..shopadmin..." />
+            <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
+            <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
+    <entry file="file://$PROJECT_DIR$/model/Book.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="65" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.46735394">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#654#1297#0#PHP" expanded="false" />
-            <element signature="e#986#1297#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1443912505411" expanded="true" signature="100:118" placeholder="SELECT * FRO..book..." />
           </folding>
         </state>
       </provider>

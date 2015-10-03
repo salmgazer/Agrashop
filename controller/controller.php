@@ -18,7 +18,9 @@ switch($cmd) {
     case 2:
         getUserDetails();
         break;
-
+    case 3:
+        getBooks();
+        break;
     default:
         echo '{"result":0, message:"unknown command"}';
         break;
@@ -71,3 +73,25 @@ function getUserDetails(){
     echo '{"result": 0, "message": "You need to sign in first"}';
     return;
 }
+
+function getBooks(){
+    include "../model/Book.php";
+
+    $book = new Book();
+    $books = $book->getBooks();
+    if(!$books){
+        echo '{"result": 0, "message": "No books yet"}';
+        return;
+    }
+    echo '{"result": 1, "books": [';
+    while($books){
+        echo json_encode($books);
+        $books = $book->fetch();
+        if($books){
+            echo ",";
+        }
+    }
+    echo ']}';
+    return;
+}
+

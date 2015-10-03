@@ -80,3 +80,20 @@ function getUserDetails(){
     alert(objResult.username+"  "+objResult.user_type);
     return;
 }
+
+function getBooks(){
+    var strUrl = "controller/controller.php?cmd=3";
+    var objResult = sendRequest(strUrl);
+
+    if(objResult.result == 0){
+        alert("no books");
+        return;
+    }
+    var books = objResult.books;
+    var thebooks = "";
+    for(i = 0; i < books.length; i++){
+        thebooks += "<br>"+books[i]['title'];
+    }
+    document.getElementById("books").innerHTML = thebooks;
+}
+
