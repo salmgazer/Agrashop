@@ -31,6 +31,13 @@ function sendRequest(u){
 
 }
 
+$(function () {
+  $('#login-form').submit(function(e) {
+    e.preventDefault();
+    signIn();
+  });
+});
+
 function signIn(){
     var username = $("#username").val();
     var password = $("#password").val();
