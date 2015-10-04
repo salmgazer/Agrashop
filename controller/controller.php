@@ -77,8 +77,9 @@ function getUserDetails(){
 function getBooks(){
     include "../model/Book.php";
 
+    $searchEntry = $_REQUEST['searchEntry'];
     $book = new Book();
-    $books = $book->getBooks();
+    $books = $book->getBooks($searchEntry);
     if(!$books){
         echo '{"result": 0, "message": "No books yet"}';
         return;
