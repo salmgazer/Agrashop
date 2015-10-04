@@ -7,14 +7,15 @@
 }
 
 .searchForm{
+    margin-top: 40px;
 }
 .searchInput{
     border: 1px solid rgba(0,0,0,0.15);
     border-radius: 999em;
-    height: 60px;
-    font-weight: lighter;
+    height: 40px;
+    font-weight: 0.3px;
     text-align: center;
-    font-size: 30px;
+    font-size: 18x;
     font-family: "Arial", sans-serif;
 }
 
@@ -66,7 +67,7 @@
 .sell-book{
   color: green;
   border-color: green;
-  width: 150px;
+  width: 120px;
 }
 .sell-book:hover{
   color: #ffffff;
@@ -115,4 +116,8 @@
 
 .ISBN{
   color: green;
+}
+
+.alert{
+    text-align: center;
 }
