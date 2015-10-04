@@ -20,5 +20,99 @@
 
 .book_cover{
     min-width: 150px;
-    max-width: 150px;
+}
+
+.book-title{
+  color: blue;
+    font-weight: bolder;
+  font-family: "helvetica",sans-serif;
+}
+.author{
+  color: #004B91;
+  text-decoration: underline;
+}
+
+.author-icon{
+  color: #996633;
+}
+
+.retail_price{
+  color: #CC0000;
+  font-size: 18px;
+}
+
+.wholesale_price{
+  color: #900;
+  font-size: 18px;
+}
+
+.update-book{
+  color: green;
+  border-color: green;
+  width: 110px;
+  margin-bottom: 5px;
+}
+.update-book:hover{
+  color: #ffffff;
+  background-color: green;
+  border-color: green;
+}
+.update-book:active{
+  color: #ffffff;
+  background-color: green;
+  border-color: green;
+}
+
+.sell-book{
+  color: green;
+  border-color: green;
+  width: 150px;
+}
+.sell-book:hover{
+  color: #ffffff;
+  background-color: forestgreen;
+  border-color: greenyellow;
+}
+.sell-book:active{
+  color: #ffffff;
+  background-color: forestgreen;
+  border-color: greenyellow;
+}
+
+.add-new-book{
+  border-color: green;
+}
+
+.add-new-book:hover{
+  background-color: green;
+}
+
+.search-form{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.red-text{
+  color: red;
+}
+
+.blue-text{
+  color: blue;
+}
+
+.cancel_shopping{
+  margin-top: 70px;
+}
+
+.checkout{
+  border-radius: 0px;
+  float: right;
+}
+
+.seller{
+  margin-bottom: 20px;
+}
+
+.ISBN{
+  color: green;
 }
