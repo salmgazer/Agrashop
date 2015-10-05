@@ -134,10 +134,8 @@ function getBookById(current_book_id){
 
     if(objResult.result == 1){
         current_book = objResult.singleBook;
-        alert(current_book[0]['author']);
-        alert(current_book[0]['ISBN']);
         var title = current_book[0]['title'];
-        $("#sellBook").load('views/sellBook.html');
+        //$("#sellBook").load('views/sellBook.html');
         //document.getElementById('book_cover').innerHTML = "here"//'<img src='+current_book[0]['photo']+' class="book_cover" />';
         document.getElementById('book_title').innerHTML = title;
         document.getElementById('author').innerHTML = current_book[0]['author'];
