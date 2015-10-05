@@ -14,4 +14,16 @@ class Book extends adb{
         }
         return $books;
     }
+
+    function getBookById($current_book_id){
+        //query to get single book based on book id
+        $str_sql = "select * from book where id = $current_book_id limit 0,1";
+
+        $this->query($str_sql);
+        $current_book = $this->fetch();
+        if($current_book == null){
+            return false;
+        }
+        return $current_book;
+    }
 }

@@ -21,6 +21,9 @@ switch($cmd) {
     case 3:
         getBooks();
         break;
+    case 4:
+        getBookById();
+        break;
     default:
         echo '{"result":0, message:"unknown command"}';
         break;
@@ -75,7 +78,7 @@ function getUserDetails(){
 }
 
 function getBooks(){
-    include "../model/Book.php";
+    include_once "../model/Book.php";
 
     $searchEntry = $_REQUEST['searchEntry'];
     $book = new Book();
@@ -93,6 +96,21 @@ function getBooks(){
         }
     }
     echo ']}';
+    return;
+}
+
+function getBookById(){
+    include_once "../model/Book.php";
+
+    $current_book_id = $_REQUEST['current_book_id'];
+    $book = new Book();
+    $singleBook = $book->getBookById($current_book_id);
+
+    if(!$singleBook){
+        echo '{"result": 0, "message": "No such book"}';
+        return;
+    }
+    echo '{"result": 1, "singleBook": ['.json_encode($singleBook).']}';
     return;
 }
 

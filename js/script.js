@@ -1,6 +1,14 @@
 /**
  * Created by Salifu on 9/5/2015.
  */
+
+//stores id of selected book
+var current_book_id = -10;
+//stores details of a selected book
+var current_book = [];
+//stores details of a sale
+var sale = [];
+
 $(function() {
 
     $('#login-form-link').click(function(e) {
@@ -103,8 +111,45 @@ function getBooks(){
     for(i = 0; i < books.length; i++){
         var singleBook = document.createElement("div");
 
-        singleBook.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><img src=img/'+books[i]['photo']+' class="book_cover"/><h5 class="book-title">'+books[i]['title']+'</h5><h6 class="author"><span class="author-icon"> </span> Author: <span>'+books[i]['author']+'</span></h6><h6 class="publisher">Publisher: <span>'+books[i]['publisher']+'</span></h6><h6 class="book-subject">Subject: <span>'+books[i]['subject']+'</span></h6><h5 class="quantity">Quantity: <span>'+books[i]['quantity']+'</span></h5><h6>Retail: <span class="retail_price"> GH¢'+books[i]['retail_price']+'</span></h6><h6>Wholesale: <span class="wholesale_price"> GH¢'+books[i]['wholesale_price']+'</span></h6><div><a href="" class="btn btn-default sell-book" onclick="sellBook('+books[i]['id']+')">Sell Book</a></div></div></div>';
+        singleBook.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><img src=img/'+books[i]['photo']+' class="book_cover"/><h5 class="book-title">'+books[i]['title']+'</h5><h6 class="author"><span class="author-icon"> </span> Author: <span>'+books[i]['author']+'</span></h6><h6 class="publisher">Publisher: <span>'+books[i]['publisher']+'</span></h6><h6 class="book-subject">Subject: <span>'+books[i]['subject']+'</span></h6><h5 class="quantity">Quantity: <span>'+books[i]['quantity']+'</span></h5><h6>Retail: <span class="retail_price"> GH¢'+books[i]['retail_price']+'</span></h6><h6>Wholesale: <span class="wholesale_price"> GH¢'+books[i]['wholesale_price']+'</span></h6><div><button class="btn btn-default sell-book" onclick="sellBook('+books[i]['id']+')">Sell Book</button></div></div></div>';
 
         document.getElementById("books").appendChild(singleBook);
+    }
+}
+
+function sellBook(book_id){
+    current_book_id = book_id;
+    //alert(current_book_id);
+    document.getElementById("books").innerHTML = "";
+    document.getElementById("searchArea").innerHTML = "";
+    document.getElementById("searchReport").innerHTML = "";
+    window.location.href = "#sellBook";
+    getBookById(current_book_id);
+}
+
+function getBookById(current_book_id){
+    //alert(current_book_id);
+    var str_url = "controller/controller.php?cmd=4&current_book_id="+current_book_id;
+    objResult = sendRequest(str_url);
+
+    if(objResult.result == 1){
+        current_book = objResult.singleBook;
+        alert(current_book[0]['author']);
+        alert(current_book[0]['ISBN']);
+        var title = current_book[0]['title'];
+        $("#sellBook").load('views/sellBook.html');
+        //document.getElementById('book_cover').innerHTML = "here"//'<img src='+current_book[0]['photo']+' class="book_cover" />';
+        document.getElementById('book_title').innerHTML = title;
+        document.getElementById('author').innerHTML = current_book[0]['author'];
+        document.getElementById('ISBN').innerHTML = current_book[0]['ISBN'];
+        alert(current_book[0]['ISBN']);
+        document.getElementById('publisher').innerHTML = current_book[0]['publisher'];
+        document.getElementById('sublect').innerHTML = current_book[0]['subject'];
+        document.getElementById('retail_price').innerHTML = current_book[0]['retail_price'];
+        document.getElementById('wholesale_price').innerHTML = current_book[0]['wholesale_price'];
+    }
+    else{
+        current_book = [];
+        alert("Book not found");
     }
 }

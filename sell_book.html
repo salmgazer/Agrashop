@@ -13,21 +13,8 @@
 
             </div>
         </div>
-        <div class="row" id="searchArea">
-            <form class="form-group col-sm-8 col-md-offset-2 searchForm" id="searchForm">
-                <input class="form-control searchInput" name="searchInput" placeholder="search here" id="searchInput">
-            </form>
-        </div>
-        <div id="searchReport">
-
-        </div>
         <!--books-->
-        <div id="books">
-
-        </div>
-
-        <!--Sell books-->
-        <div class="sellBook" id="sellBook">
+        <div id="singleBook">
 
         </div>
     </div>
@@ -39,8 +26,7 @@
 	<script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-           // getUserDetails();
-            getBooks();
+            getBookById(current_book);
         });
     </script>
 </body>
