@@ -24,9 +24,10 @@
 }
 
 .book-title{
-  color: blue;
+    color: blue;
     font-weight: bolder;
-  font-family: "helvetica",sans-serif;
+    font-family: "Georgia", "helvetica",sans-serif;
+    font-size: 18px;
 }
 .author{
   color: #004B91;
