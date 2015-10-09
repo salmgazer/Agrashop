@@ -3,7 +3,7 @@
     <div id="book_cover">
         </div>
       <h5 class="book-title" id="book_title"></h5>
-      <h6 class="author"><span class="author-icon">> </span> Author: <span id="author"></span></h6>
+      <h6 class="author"><span class="author-icon"> </span> Author: <span id="author"></span></h6>
       <h6>ISBN: <span id="ISBN" class="ISBN"></span></h6>
       <h6 class="publisher">Publisher: <span id="publisher"></span></h6>
       <h6 class="book-subject">Subject: <span id="subject"></span></h6>
@@ -13,44 +13,37 @@
     </div>
   </div>
 
-<!--<div class="col-sm-8">
-<form>
-	<h4 class="seller">Seller: <strong class="blue-text" id="seller">{{seller}}</strong></h4>
-  {{#if cart_state != null}}
-  <h4 class="red-text">Cart State: <strong id="cart_state"></strong><strong id="cart_id"></strong></h4>
-  {{else}}
-  <h4 class="red-text">Cart is empty</h4>
-  {{/if}}
+<div class="col-sm-8">
+	<h4 class="seller">Seller: <strong class="blue-text" id="seller"></strong></h4>
+  <h4 class="red-text">Cart State: <strong id="cart_state"></strong>Cart ID: <strong id="cart_id"></strong></h4>
+
 	<div class="form-group col-sm-6">
-      <label class="control-label" for="quantity">Quantity <b>(Only <strong class="red-text" id="available">{{quantity}}</strong> is/are available)</b></label>
+      <label class="control-label" for="quantity_tosell">Quantity : <b>(Only <strong class="red-text" id="available"></strong> is/are available)</b></label>
       <div class="controls">
-          <input name="quantity" id="quantity" type="number" value="" placeholder="0" class="form-control quantity"/>
+          <input name="quantity_tosell" id="quantity_tosell" type="number" value="" placeholder="0" class="form-control quantity" onkeyup="updateCurrentCost()" onchange="updateCurrentCost()"/>
       </div>
     </div>
     <div class="form-group col-sm-6">
       <label class="control-label" for="sale_type">Sale type</label>
       <div class="controls">
-          <select class="form-control sale_type" id="sale_type" name="sale_type">
-          	<option value="0">--Select sale type---</option>
-          	<option value="{{wholesale_price}}">Wholesale : GH¢{{wholesale_price}}</option>
-          	<option value="{{retail_price}}">Retail : GH¢{{retail_price}}</option>
+          <select class="form-control sale_type" id="sale_type" name="sale_type" onchange="updateCurrentCost()">
+
           </select>
       </div>
     </div>
-    <div class="col-sm-10">
-    	<h3 class="blue-text">Sale cost: {{sale_cost}}</h3>
+    <div class="col-sm-10" id="sale_cost">
+    	<h3 class="blue-text">Sale cost: GH¢ <b id="current_sale_cost"> 0</b></h3>
     </div>
-        <div class="col-sm-10">
+        <div class="col-sm-10" id="total_sale_cost">
     	<h2 class="red-text">Total Cart cost: {{sale_cost}}</h2>
     </div>
     <div class="col-sm-12">
-        <a href="" class="btn btn-success add-to-cart">Add To Cart</a>
-    	<a href="" class="btn btn-default continue-shopping">Continue shopping</a>
+        <button class="btn btn-success add-to-cart" onclick="addToCart()">Add To Cart</button>
+    	<button class="btn btn-default continue-shopping">Continue shopping</button>
     	<button class="btn btn-danger checkout">Checkout</button>
     </div>
     <hr>
     <div class="col-sm-6">
     	<button class="btn btn-primary cancel_shopping">Cancel shopping</button>
     </div>
-</form>
-</div>-->
+</div>

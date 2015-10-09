@@ -122,3 +122,7 @@
 .alert{
     text-align: center;
 }
+
+#cart_state{
+    margin-right: 50px;
+}
