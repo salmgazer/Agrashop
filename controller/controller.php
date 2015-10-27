@@ -19,13 +19,16 @@ switch($cmd) {
         getUserDetails();
         break;
     case 3:
-        getBooks();
+        getProducts();
         break;
     case 4:
         getBookById();
         break;
     case 5:
         registerUser();
+        break;
+    case 6:
+        addProduct();
         break;
     default:
         echo '{"result":0, message:"unknown command"}';
@@ -86,21 +89,36 @@ function getUserDetails(){
     return;
 }
 
-function getBooks(){
-    include_once "../model/Book.php";
+function addProduct(){
+    $product_id = $_REQUEST['product_id'];
+    $product_name = $_REQUEST['product_name'];
+    $product_quantity = $_REQUEST['product_quantity'];
+    $product_unit_price = $_REQUEST['product_unit_price'];
 
-    $searchEntry = $_REQUEST['searchEntry'];
-    $book = new Book();
-    $books = $book->getBooks($searchEntry);
-    if(!$books){
-        echo '{"result": 0, "message": "No books yet"}';
+    include_once "../model/Product.php";
+    $product = new Product();
+    if($product->addProduct($product_id, $product_name, $product_quantity, $product_unit_price)){
+        echo '{"result": 1, "message": "'.$product_name.' has been added"}';
         return;
     }
-    echo '{"result": 1, "books": [';
-    while($books){
-        echo json_encode($books);
-        $books = $book->fetch();
-        if($books){
+    echo '{"result": 0, "message": "'.$product_name.' has not been added"}';
+    return;
+}
+
+function getProducts(){
+    include_once "../model/Product.php";
+    $searchEntry = $_REQUEST['searchEntry'];
+    $product = new Product();
+    $products = $product->getProducts($searchEntry);
+    if(!$products){
+        echo '{"result": 0, "message": "No products yet"}';
+        return;
+    }
+    echo '{"result": 1, "products": [';
+    while($products){
+        echo json_encode($products);
+        $products = $product->fetch();
+        if($products){
             echo ",";
         }
     }

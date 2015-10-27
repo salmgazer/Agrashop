@@ -85,7 +85,7 @@ $(function () {
 $(function () {
   $('#searchInput').keyup(function(e) {
     e.preventDefault();
-    getBooks();
+    getProducts();
   });
 });
 
@@ -137,19 +137,33 @@ function getUserDetails(){
     var objResult = sendRequest(strUrl);
 
     if(objResult.result == 0){
-        alert("nothing");
         alert(objResult.message);
         window.location.href = "index.html";
         return;
     }
     current_username = objResult.username;
     current_usertype = objResult.user_type;
-    //alert(objResult.username+"  "+objResult.user_type);
     return;
 }
 
+function addProduct(){
+    var product_id = $("#product_id").val();
+    var product_name = $("#product_name").val();
+    var product_quantity = $("#product_quantity").val();
+    var product_unit_price = $("#product_unit_price").val();
+
+    var strUrl = ctrUrl+"cmd=6&product_id="+product_id+"&product_name="+product_name+"&product_quantity="+product_quantity+"&product_unit_price="+product_unit_price;
+    var objResult = sendRequest(strUrl);
+    if(objResult.result == 0){
+
+    }else{
+
+    }
+    alert(objResult.message);
+}
+
 //Function to get all books in search query
-function getBooks(){
+function getProducts(){
     var searchEntry = $("#searchInput").val();
     var strUrl = "controller/controller.php?cmd=3&searchEntry="+searchEntry;
     var objResult = sendRequest(strUrl);
@@ -158,14 +172,14 @@ function getBooks(){
         document.getElementById("searchReport").innerHTML = '<div class="row"><div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>No books with key words '+searchEntry+' found.</strong></div></div>';
         return;
     }
-    var books = objResult.books;
+    var products = objResult.products;
     document.getElementById("books").innerHTML = "";
-    for(i = 0; i < books.length; i++){
-        var singleBook = document.createElement("div");
+    for(var i = 0; i < products.length; i++){
+        var singleProduct = document.createElement("div");
 
-        singleBook.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><img src=img/'+books[i]['photo']+' class="book_cover"/><h5 class="book-title">'+books[i]['title']+'</h5><h6 class="author"><span class="author-icon"> </span> Author: <span>'+books[i]['author']+'</span></h6><h6 class="publisher">Publisher: <span>'+books[i]['publisher']+'</span></h6><h6 class="book-subject">Subject: <span>'+books[i]['subject']+'</span></h6><h5 class="quantity">Quantity: <span>'+books[i]['quantity']+'</span></h5><h6>Retail: <span class="retail_price"> GH¢'+books[i]['retail_price']+'</span></h6><h6>Wholesale: <span class="wholesale_price"> GH¢'+books[i]['wholesale_price']+'</span></h6><div><button class="btn btn-default sell-book" onclick="sellBook('+books[i]['id']+')">Sell Book</button></div></div></div>';
+        singleProduct.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><img src="" class="book_cover"/><h5 class="book-title">'+products[i]['product_name']+'</h5><h5>ID: '+products[i]['product_id']+'</h5><h6 class="publisher">Price: <span>Gh&#8373; '+products[i]['product_unit_price']+'</span></h6><h5 class="quantity">Quantity: <span>'+products[i]['product_quantity']+'</span></h5><div><button class="btn btn-default sell-book" onclick="sellBook('+products[i]['product_id']+')">Sell Product</button></div></div></div>';
 
-        document.getElementById("books").appendChild(singleBook);
+        document.getElementById("books").appendChild(singleProduct);
     }
 }
 
@@ -173,7 +187,7 @@ function getBooks(){
 function getBookById(current_book_id){
     //alert(current_book_id);
     var str_url = "controller/controller.php?cmd=4&current_book_id="+current_book_id;
-    objResult = sendRequest(str_url);
+    var objResult = sendRequest(str_url);
 
     if(objResult.result == 1){
         current_book = objResult.singleBook;

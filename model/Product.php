@@ -27,10 +27,19 @@ class Product extends adb{
         return $current_product;
     }
     
-    function addProduct($product_id, $product_name, $product_quantity, $product_unit_price){
-        $str_sql = "INSERT into product(product_id, product_name, product_quantity, product_unit_price) values ('$product_id',
-        '$product_name', '$product_quantity', '$product_unit_price')";
-        
-        return $this->query($str_sql);
-    }
+   function addProduct($product_id, $product_name, $product_quantity, $product_unit_price){
+       $str_sql = "INSERT INTO product(product_id, product_name, product_quantity, product_unit_price) VALUES ('$product_id', '$product_name', $product_quantity, $product_unit_price)";
+       return $this->query($str_sql);
+   }
+
+   function updatePrice($product_id, $newPrice){
+       $str_sql = "UPDATE product set product_unit_price = $newPrice WHERE product_id = '$product_id'";
+       return $this->query($str_sql);
+   }
+
 }
+
+//$prod = new Product();
+//echo $prod->addProduct("89hj3", "Apple Iphone", 34, 34.78);
+//echo $prod->getProductById("TV123JJ")['product_name'];
+//echo $prod->getProducts("apple")['product_name'];
