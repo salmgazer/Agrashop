@@ -142,7 +142,7 @@ function registerUser(){
 
 //function to get details of user
 function getUserDetails(){
-    var strUrl = "controller/controller.php?cmd=2";
+    var strUrl = ctrUrl+"2";
     var objResult = sendRequest(strUrl);
 
     if(objResult.result == 0){
@@ -200,21 +200,26 @@ function getProductById(product_id){
     var objResult = sendRequest(strUrl);
     
     if(objResult.result == 0){
-        return false;
+        return "false";
     }
     //successfully got product
-    current_product = objResult.singleProduct;
+    return objResult.singleProduct;
 }
 
 //function to start sell page of a single book
 function sellProduct(product_id){
-    alert(product_id);
-    if(!getProductById(product_id)){
+    var theProduct = getProductById(product_id);
+    if(theProduct == "false"){
         alert("Could not get product");
         return;
     }
-    //display
-    $("#sellBook").load("views/sellProduct.html");   
+    $("#sellBook").load("views/sellProduct.html");  
+    var myProd = theProduct[0];
+    alert(myProd['product_name']);
+    //document.getElementById("seller_username_Sell").innerHTML = current_username;
+    document.getElementById("books").innerHTML = myProd['product_id'];
+    document.getElementById("product_quantity_sell").innerHTML = myProd['product_quantity'];
+    document.getElementById("product_unit_price_sell").innerHTML = myProd['product_unit_price']; 
 }
 
 //update sale cost
