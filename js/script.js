@@ -83,12 +83,7 @@ $(function () {
 function signIn(){
     var username = $("#username").val();
     var password = $("#password").val();
-    var user_type = $("#user_type").val();
 
-    if(user_type == 0){
-        alert("You must choose a user type");
-        return;
-    }
     if(username.length <= 1){
         alert("Enter correct username");
         return;
@@ -99,7 +94,7 @@ function signIn(){
         return;
     }
 
-    var strUrl = "controller/controller.php?cmd=1&username="+username+"&password="+password+"&user_type="+user_type;
+    var strUrl = "controller/controller.php?cmd=1&username="+username+"&password="+password;
     var objResult = sendRequest(strUrl);
     if(objResult.result == 0){
         alert(objResult.message);
@@ -107,7 +102,6 @@ function signIn(){
     }
     getUserDetails();
     window.location.href = "home.html";
-    print(" Welcome " + getUsername());
     }
 
 //function to get details of user

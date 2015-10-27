@@ -124,8 +124,9 @@ seller_password = '$seller_password' limit 0,1";
 
     }
     
-    $mysel = new Seller();
+    /*$mysel = new Seller();
    //echo $mysel->checkShopkeeper("aliseller", "aliseller123");
    echo $mysel->addShopkeeper("Joe Juhu", "j5y28j", "joethertler67", "0247998234", "admin", "dototo4real");
+   */
     
 

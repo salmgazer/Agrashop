@@ -35,36 +35,17 @@ switch($cmd) {
 function signIn(){
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
-    $user_type = $_REQUEST['user_type'];
 
-    include "../model/Member.php";
-    $member = new Member();
-
-    if($user_type == "1"){
-        if($member->signInShopkeeper($username, $password)){
-            $_SESSION['username'] = $username;
-            $_SESSION['password'] = $password;
-            $_SESSION['user_type'] = $user_type;
-            echo '{"result": 1, "message": "Signed in successfully as shopkeeper"}';
+    include "../model/Seller.php";
+    $seller = new Seller();
+    if($seller->signInShopkeeper($username, $password)){
+        echo '{"result": 1, "message": "Signed in successfully"}';
             return;
-        }else{
-            echo '{"result": 0, "message": "Sign in as shopkeeper unsuccessful"}';
+    }
+    else{
+            echo '{"result": 0, "message": "Sign in was unsuccessful"}';
             return;
         }
-    }
-    else if($user_type == "2"){
-        if($member->signInAdmin($username, $password)){
-            $_SESSION['username'] = $username;
-            $_SESSION['password'] = $password;
-            $_SESSION['user_type'] = $user_type;
-            echo '{"result": 1, "message": "Signed in successfully as admin"}';
-            return;
-        }else{
-            echo '{"result": 0, "message": "Sign in as admin was unsuccessful"}';
-            return;
-        }
-    }
-
 }
 
 function getUserDetails(){
@@ -72,7 +53,7 @@ function getUserDetails(){
         echo '{"result": 1, "username": "'.$_SESSION['username'].'", "user_type": "'.$_SESSION['user_type'].'"}';
         return;
     }
-   // session_destroy();
+   //session_destroy();
     echo '{"result": 0, "message": "You need to sign in first"}';
     return;
 }
