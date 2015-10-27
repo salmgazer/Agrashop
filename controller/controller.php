@@ -24,6 +24,9 @@ switch($cmd) {
     case 4:
         getBookById();
         break;
+    case 5:
+        registerUser();
+        break;
     default:
         echo '{"result":0, message:"unknown command"}';
         break;
@@ -36,16 +39,41 @@ function signIn(){
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
 
-    include "../model/Seller.php";
+    include_once "../model/Seller.php";
     $seller = new Seller();
     if($seller->signInShopkeeper($username, $password)){
         echo '{"result": 1, "message": "Signed in successfully"}';
             return;
     }
-    else{
-            echo '{"result": 0, "message": "Sign in was unsuccessful"}';
-            return;
-        }
+    echo '{"result": 0, "message": "Sign in was unsuccessful"}';
+    return;
+}
+
+function registerUser(){
+    $seller_name = $_REQUEST['seller_username'];
+    $seller_username = $_REQUEST['seller_username'];
+    $seller_password = $_REQUEST['seller_password'];
+    $seller_phone = $_REQUEST['seller_phone'];
+    $seller_type = $_REQUEST['seller_type'];
+    $admin_password = $_REQUEST['admin_password'];
+    
+    include_once "../model/Seller.php";
+    $seller = new Seller();
+    $adduser = $seller->addShopKeeper($seller_name, $seller_username, $seller_password, $seller_phone, $seller_type, $admin_password);
+    if($adduser == "wrong admin password!"){
+        echo '{"result": 0, "message": "'.$adduser.'"}';
+        return;
+    }
+    if($adduser == "existing username"){
+        echo '{"result": 0, "message": "'.$adduser.'"}';
+        return;
+    }
+    if($adduser){
+        echo '{"result": 1, "message": "You successfully added '.$seller_name.' as a '.$seller_type.'"}';
+        return;
+    }
+    echo '{"result": 0, "Failed to add '.$seller_name.' as '.$seller_type.'"}';
+    return;
 }
 
 function getUserDetails(){

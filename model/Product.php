@@ -3,7 +3,7 @@ include "adb.php";
 
 class Product extends adb{
 
-    function getProductss($searchEntry){
+    function getProducts($searchEntry){
        // $str_sql = "SELECT * FROM product WHERE title like '$searchEntry'";
         $str_sql = "select * from product where product_name LIKE CONCAT('%','$searchEntry','%')";
 
@@ -25,5 +25,12 @@ class Product extends adb{
             return false;
         }
         return $current_product;
+    }
+    
+    function addProduct($product_id, $product_name, $product_quantity, $product_unit_price){
+        $str_sql = "INSERT into product(product_id, product_name, product_quantity, product_unit_price) values ('$product_id',
+        '$product_name', '$product_quantity', '$product_unit_price')";
+        
+        return $this->query($str_sql);
     }
 }

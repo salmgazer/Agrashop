@@ -2,6 +2,8 @@
  * Created by Salifu on 9/5/2015.
  */
 
+//controller url
+var ctrUrl = "controller/controller.php?cmd=";
 //stores id of selected book
 var current_book_id = -10;
 //stores details of a selected book
@@ -71,6 +73,14 @@ $(function () {
   });
 });
 
+//Register user events
+$(function () {
+  $('#register-form').submit(function(e) {
+    e.preventDefault();
+    registerUser();
+  });
+});
+
 //search event
 $(function () {
   $('#searchInput').keyup(function(e) {
@@ -78,6 +88,7 @@ $(function () {
     getBooks();
   });
 });
+
 
 //sign in function
 function signIn(){
@@ -94,7 +105,7 @@ function signIn(){
         return;
     }
 
-    var strUrl = "controller/controller.php?cmd=1&username="+username+"&password="+password;
+    var strUrl = ctrUrl+"1&username="+username+"&password="+password;
     var objResult = sendRequest(strUrl);
     if(objResult.result == 0){
         alert(objResult.message);
@@ -103,6 +114,22 @@ function signIn(){
     getUserDetails();
     window.location.href = "home.html";
     }
+
+function registerUser(){
+    var seller_name = $("#seller_name").val();
+    var seller_username = $("#seller_username").val();
+    var seller_password = $("#seller_password").val();
+    var seller_phone = $("#seller_phone").val();
+    var seller_type = $("#seller_type").find(":selected").text();
+    var admin_password = $("#admin_password").val();
+    
+    var strUrl = ctrUrl+"5&seller_name="+seller_name+"&seller_username="+seller_username+"&seller_password="+seller_password+
+    "&seller_phone="+seller_phone+"&seller_type="+seller_type+"&admin_password="+admin_password;
+    
+    var objResult = sendRequest(strUrl);
+    alert(objResult.message);
+}    
+    
 
 //function to get details of user
 function getUserDetails(){

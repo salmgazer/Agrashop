@@ -15,7 +15,7 @@ class Seller extends adb
 
     function checkAdminPass($admin_password){
 
-        $str_sql = "SELECT * from seller where seller_password = '$admin_password' limit 0,1";
+        $str_sql = "SELECT * from seller where seller_password = '$admin_password' AND seller_type = 'admin' limit 0,1";
         $this->query($str_sql);
         if($this->fetch() == null)
         {
@@ -24,8 +24,7 @@ class Seller extends adb
         return true;
     }
 
-    function addShopkeeper($seller_name, $seller_username, $seller_password, $seller_phone, $seller_type, $admin_password)
-    {
+    function addShopkeeper($seller_name, $seller_username, $seller_password, $seller_phone, $seller_type, $admin_password) {
         
         /* SEARCH IF  ADMIN PASSWORD EXISTS */
         if(!$this->checkAdminPass($admin_password))
@@ -124,9 +123,9 @@ seller_password = '$seller_password' limit 0,1";
 
     }
     
-    /*$mysel = new Seller();
+    //$mysel = new Seller();
    //echo $mysel->checkShopkeeper("aliseller", "aliseller123");
-   echo $mysel->addShopkeeper("Joe Juhu", "j5y28j", "joethertler67", "0247998234", "admin", "dototo4real");
-   */
+   //echo $mysel->addShopkeeper("Joe Juhu", "j5y28j", "joethertler67", "0247998234", "admin", "dototo4real");
+   
     
 
