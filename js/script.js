@@ -208,22 +208,25 @@ function getProductById(product_id){
 
 //function to start sell page of a single book
 function sellProduct(product_id){
+   // $("#sellBook").load("views/sellProduct.html");  
     var theProduct = getProductById(product_id);
     if(theProduct == "false"){
         alert("Could not get product");
         return;
     }
-    $("#sellBook").load("views/sellProduct.html");  
     var myProd = theProduct[0];
-    alert(myProd['product_name']);
-    //document.getElementById("seller_username_Sell").innerHTML = current_username;
-    document.getElementById("books").innerHTML = myProd['product_id'];
+    //alert(myProd['product_name']);
+    document.getElementById("seller_username_Sell").innerHTML = current_username;
+    document.getElementById("product_name_sell").innerHTML = myProd['product_name'];
+    document.getElementById("product_id_sell").innerHTML = myProd['product_id'];
     document.getElementById("product_quantity_sell").innerHTML = myProd['product_quantity'];
     document.getElementById("product_unit_price_sell").innerHTML = myProd['product_unit_price']; 
 }
 
 //update sale cost
 function updateCurrentCost () {
-
+    var quantity = $("#quantity_tosell").val();
+    var price = document.getElementById("product_unit_price_sell").innerHTML * 1;
+    document.getElementById("current_sale_cost_sell").innerHTML = quantity * price + "";
 }
 
