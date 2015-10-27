@@ -222,10 +222,3 @@ function updateCurrentCost () {
 
 }
 
-function addToCart(){
-
-}
-
-function sellme(){
-    alert("me");
-}
