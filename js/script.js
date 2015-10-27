@@ -28,6 +28,7 @@ var current_sale_cost_single;
 var current_sale_quantity;
 var current_sale_cost;
 var current_sale_type;
+var current_product;
 
 //user details
 var current_username;
@@ -86,14 +87,6 @@ $(function () {
   $('#searchInput').keyup(function(e) {
     e.preventDefault();
     getProducts();
-  });
-});
-
-//Add product event
-$(function () {
-  $('#addProductBtn').click(function(e) {
-    e.preventDefault();
-    $("#addProductArea").load("views/addproduct.html");
   });
 });
 
@@ -167,15 +160,10 @@ function addProduct(){
     var product_name = $("#product_name").val();
     var product_quantity = $("#product_quantity").val();
     var product_unit_price = $("#product_unit_price").val();
-    
-    alert(product_id);
-    alert(product_name);
-    alert(product_quantity);
-    alert(product_unit_price);
-    return;
 
-    var strUrl = ctrUrl+"cmd=6&product_id="+product_id+"&product_name="+product_name+"&product_quantity="+product_quantity+"&product_unit_price="+product_unit_price;
+    var strUrl = ctrUrl+"6&product_id="+product_id+"&product_name="+product_name+"&product_quantity="+product_quantity+"&product_unit_price="+product_unit_price;
     var objResult = sendRequest(strUrl);
+    alert("me");
     if(objResult.result == 0){
 
     }else{
@@ -206,16 +194,16 @@ function getProducts(){
 }
 
 //function to get details fo a specific book
-function getBookById(current_book_id){
+function getProductById(product_id){
     //alert(current_book_id);
-    var str_url = "controller/controller.php?cmd=4&current_book_id="+current_book_id;
+    var str_url = ctrUrl+"4&current_book_id="+product_id;
     var objResult = sendRequest(str_url);
 
     if(objResult.result == 1){
-        current_book = objResult.singleBook;
-        var title = current_book[0]['title'];
+        var current_product = objResult.singleBook;
+        current_product = current_product[0];
         //$("#sellBook").load('views/sellBook.html');
-        document.getElementById('book_cover').innerHTML = '<img src=img/'+current_book[0]['photo']+' class="book_cover" />';
+        /*document.getElementById('book_cover').innerHTML = '<img src=img/'+current_book[0]['photo']+' class="book_cover" />';
         document.getElementById('book_title').innerHTML = title;
         document.getElementById('author').innerHTML = current_book[0]['author'];
         document.getElementById('ISBN').innerHTML = current_book[0]['ISBN'];
@@ -223,33 +211,30 @@ function getBookById(current_book_id){
         document.getElementById('subject').innerHTML = current_book[0]['subject'];
         document.getElementById('wholesale_price').innerHTML = current_book[0]['wholesale_price'];
         document.getElementById('retail_price').innerHTML = current_book[0]['retail_price'];
-        document.getElementById("sale_type").innerHTML = '<option value="0">--Select sale type---</option><option id="whole" value="'+current_book[0]['wholesale_price']+'">Wholesale :'+current_book[0]['wholesale_price']+'</option><option id="retail" value="'+current_book[0]['retail_price']+'">Retail : GH¢'+current_book[0]['retail_price']+'</option>';
-    }
-    else{
-        current_book = [];
-        alert("Book not found");
+        document.getElementById("sale_type").innerHTML = '<option value="0">--Select sale type---</option><option id="whole" value="'+current_book[0]['wholesale_price']+'">Wholesale :'+current_book[0]['wholesale_price']+'</option><option id="retail" value="'+current_book[0]['retail_price']+'">Retail : GH¢'+current_book[0]['retail_price']+'</option>';*/
     }
 }
 
 //function to start sell page of a single book
-function sellBook(book_id){
-    current_book_id = book_id;
+function sellProduct(product_id){
+    //current_book_id = book_id;
     //alert(current_book_id);
     document.getElementById("books").innerHTML = "";
     document.getElementById("searchArea").innerHTML = "";
     document.getElementById("searchReport").innerHTML = "";
-    window.location.href = "#sellBook";
-    getBookById(current_book_id);
+    //window.location.href = "#sellBook";
+    $("#books").load("view/sellProduct.html");
+    getProductById(current_book_id);
     document.getElementById("seller").innerHTML = current_username;
-    if(cart.length == 0){
+    /*if(cart.length == 0){
         document.getElementById("cart_state").innerHTML = "Empty";
         document.getElementById("cart_id").innerHTML = "none";
-    }
-    else{
+    }*/
+    /*else{
         document.getElementById("cart_state").innerHTML = "shopping";
         document.getElementById("cart_id").innerHTML = cart['id'];
-    }
-    document.getElementById("available").innerHTML = current_book[0]['quantity'];
+    }*/
+    document.getElementById("available").innerHTML = curren[0]['quantity'];
 }
 
 //update sale cost
