@@ -10,9 +10,16 @@
 /* Include adb.php */
 include "adb.php";
 
+/**
+ * Class Seller
+ */
 class Seller extends adb
 {
 
+    /**
+     * @param $admin_password
+     * @return bool
+     */
     function checkAdminPass($admin_password){
 
         $str_sql = "SELECT * from seller where seller_password = '$admin_password' AND seller_type = 'admin' limit 0,1";
@@ -24,6 +31,15 @@ class Seller extends adb
         return true;
     }
 
+    /**
+     * @param $seller_name
+     * @param $seller_username
+     * @param $seller_password
+     * @param $seller_phone
+     * @param $seller_type
+     * @param $admin_password
+     * @return bool|string
+     */
     function addShopkeeper($seller_name, $seller_username, $seller_password, $seller_phone, $seller_type, $admin_password) {
         
         /* SEARCH IF  ADMIN PASSWORD EXISTS */
@@ -44,22 +60,11 @@ class Seller extends adb
         return $this->query($str_sql);
     }
 
-   /* function addAdmin($firstname, $lastname, $email, $admin_username, $admin_password, $other_admin_password)
-    {
-        /* SEARCH IF  ADMIN PASSWORD EXISTS */
-        /*if(!$this->checkAdminPass($other_admin_password))
-        {
-            return "wrong existing admin password!";
-        }
-
-        /* Add new Admin */
-        /*$str_sql = "INSERT INTO shopadmin (firstname, lastname, email, admin_username, admin_password) VALUES
-('$firstname', '$lastname', '$email', '$admin_username', '$admin_password')";
-
-        return $this->query($str_sql);
-    }*/
-
-    //working
+    /**
+     * @param $seller_username
+     * @param $seller_password
+     * @return bool
+     */
     function signInShopkeeper($seller_username, $seller_password)
     {
         $str_sql = "SELECT * FROM seller WHERE seller_username = '$seller_username' AND
@@ -79,25 +84,10 @@ seller_password = '$seller_password' limit 0,1";
         return true;
     }
 
-    //Not needed as at now
-    /*function signInAdmin($admin_username, $admin_password)
-    {
-        $str_sql = "SELECT * FROM shopadmin where admin_username = '$admin_username' AND admin_password = '$admin_password' limit 0,1";
-        $this->query($str_sql);
-        if($this->fetch() == null)
-        {
-            return false;
-        }
-
-        /*se sessions */
-        /*$_SESSION['user_type'] = "admin";
-        $_SESSION['username'] = $admin_username;
-        $_SESSION['password'] = $admin_password;
-
-        return true;
-    }
-    */
-    //working
+    /**
+     * @param $seller_username
+     * @return bool
+     */
     function checkShopkeeper($seller_username)
     {
         $str_sql = "SELECT * FROM seller where seller_username = '$seller_username' limit 0,1";
@@ -108,18 +98,6 @@ seller_password = '$seller_password' limit 0,1";
         }
         return true;
     }
-
-    //working
-    /*function checkAdmin($seller_username)
-    {
-        $str_sql = "SELECT * FROM seller where seller_username = '$seller_username' AND seller_type = 'admin' limit 0,1";
-        $this->query($str_sql);
-        if($this->fetch() == null)
-        {
-            return false;
-        }
-        return true;
-    }*/
 
     }
     

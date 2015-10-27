@@ -1,8 +1,15 @@
 <?php
 include "adb.php";
 
+/**
+ * Class Product
+ */
 class Product extends adb{
 
+    /**
+     * @param $searchEntry
+     * @return array|bool
+     */
     function getProducts($searchEntry){
        // $str_sql = "SELECT * FROM product WHERE title like '$searchEntry'";
         $str_sql = "select * from product where product_name LIKE CONCAT('%','$searchEntry','%')";
@@ -15,6 +22,10 @@ class Product extends adb{
         return $products;
     }
 
+    /**
+     * @param $current_product_id
+     * @return array|bool
+     */
     function getProductById($current_product_id){
         //query to get single product based on product id
         $str_sql = "select * from product where product_id = '$current_product_id' limit 0,1";
@@ -26,12 +37,24 @@ class Product extends adb{
         }
         return $current_product;
     }
-    
+
+    /**
+     * @param $product_id
+     * @param $product_name
+     * @param $product_quantity
+     * @param $product_unit_price
+     * @return bool
+     */
    function addProduct($product_id, $product_name, $product_quantity, $product_unit_price){
        $str_sql = "INSERT INTO product(product_id, product_name, product_quantity, product_unit_price) VALUES ('$product_id', '$product_name', $product_quantity, $product_unit_price)";
        return $this->query($str_sql);
    }
 
+    /**
+     * @param $product_id
+     * @param $newPrice
+     * @return bool
+     */
    function updatePrice($product_id, $newPrice){
        $str_sql = "UPDATE product set product_unit_price = $newPrice WHERE product_id = '$product_id'";
        return $this->query($str_sql);

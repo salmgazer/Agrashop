@@ -89,6 +89,7 @@ function getUserDetails(){
     return;
 }
 
+
 function addProduct(){
     $product_id = $_REQUEST['product_id'];
     $product_name = $_REQUEST['product_name'];

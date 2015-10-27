@@ -7,7 +7,11 @@
 }
 
 .searchForm{
-    margin-top: 40px;
+    width: 100%;
+}
+
+.searchArea{
+  width: 400px;
 }
 .searchInput{
     border: 1px solid rgba(0,0,0,0.15);
@@ -17,6 +21,7 @@
     text-align: center;
     font-size: 18x;
     font-family: "Arial", sans-serif;
+    width: 500px;
 }
 
 .book_cover{
@@ -125,4 +130,9 @@
 
 #cart_state{
     margin-right: 50px;
+}
+
+.btn-register{
+  width: 70%;
+  text-align: center;
 }

@@ -89,8 +89,24 @@ $(function () {
   });
 });
 
+//Add product event
+$(function () {
+  $('#addProductBtn').click(function(e) {
+    e.preventDefault();
+    $("#addProductArea").load("views/addproduct.html");
+  });
+});
+
+//search event
+$(function () {
+  $('#addProduct_form').submit(function(e) {
+    e.preventDefault();
+    addProduct();
+  });
+});
 
 //sign in function
+
 function signIn(){
     var username = $("#username").val();
     var password = $("#password").val();
@@ -151,6 +167,12 @@ function addProduct(){
     var product_name = $("#product_name").val();
     var product_quantity = $("#product_quantity").val();
     var product_unit_price = $("#product_unit_price").val();
+    
+    alert(product_id);
+    alert(product_name);
+    alert(product_quantity);
+    alert(product_unit_price);
+    return;
 
     var strUrl = ctrUrl+"cmd=6&product_id="+product_id+"&product_name="+product_name+"&product_quantity="+product_quantity+"&product_unit_price="+product_unit_price;
     var objResult = sendRequest(strUrl);
