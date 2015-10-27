@@ -22,7 +22,7 @@ switch($cmd) {
         getProducts();
         break;
     case 4:
-        getBookById();
+        getProductById();
         break;
     case 5:
         registerUser();
@@ -127,18 +127,18 @@ function getProducts(){
     return;
 }
 
-function getBookById(){
-    include_once "../model/Book.php";
+function getProductById(){
+    include_once "../model/Product.php";
 
-    $current_book_id = $_REQUEST['current_book_id'];
-    $book = new Book();
-    $singleBook = $book->getBookById($current_book_id);
+    $current_product_id = $_REQUEST['current_product_id'];
+    $product = new Product();
+    $singleProduct = $product->getProductById($current_product_id);
 
-    if(!$singleBook){
-        echo '{"result": 0, "message": "No such book"}';
+    if(!$singleProduct){
+        echo '{"result": 0, "message": "No such product"}';
         return;
     }
-    echo '{"result": 1, "singleBook": ['.json_encode($singleBook).']}';
+    echo '{"result": 1, "singleProduct": ['.json_encode($singleProduct).']}';
     return;
 }
 

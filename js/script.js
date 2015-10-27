@@ -5,29 +5,29 @@
 //controller url
 var ctrUrl = "controller/controller.php?cmd=";
 //stores id of selected book
-var current_book_id = -10;
+//var current_book_id = -10;
 //stores details of a selected book
-var current_book = [];
+//var current_book = [];
 //stores details of a sale
-var cart = [];
+//var cart = [];
 
 //stores the latest cart's id
-var latest_cart_id;
+//var latest_cart_id;
 
 //Array to store current sale
-var sale = {
+/*var sale = {
     book_id: -10,
     sale_type: "none",
     quantity: 0,
     singleCost: 0,
     totalCost: 0
 };
+*/
 
 //current sale details
 var current_sale_cost_single;
 var current_sale_quantity;
 var current_sale_cost;
-var current_sale_type;
 var current_product;
 
 //user details
@@ -186,44 +186,46 @@ function getProducts(){
     document.getElementById("books").innerHTML = "";
     for(var i = 0; i < products.length; i++){
         var singleProduct = document.createElement("div");
+        var product_id = products[i]['product_id'];
 
-        singleProduct.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><img src="" class="book_cover"/><h5 class="book-title">'+products[i]['product_name']+'</h5><h5>ID: '+products[i]['product_id']+'</h5><h6 class="publisher">Price: <span>Gh&#8373; '+products[i]['product_unit_price']+'</span></h6><h5 class="quantity">Quantity: <span>'+products[i]['product_quantity']+'</span></h5><div><button class="btn btn-default sell-book" onclick="sellBook('+products[i]['product_id']+')">Sell Product</button></div></div></div>';
+        singleProduct.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><img src="" class="book_cover"/><h5 class="book-title">'+products[i]['product_name']+'</h5><h5>ID: '+product_id+'</h5><h6 class="publisher">Price: <span>Gh&#8373; '+products[i]['product_unit_price']+'</span></h6><h5 class="quantity">Quantity: <span>'+products[i]['product_quantity']+'</span></h5><div><button class="btn btn-default sell-book" onclick=sellProduct("'+product_id+'")>Sell Product</button></div></div></div>';
 
         document.getElementById("books").appendChild(singleProduct);
     }
 }
 
-//function to get details fo a specific book
+//function to get details of a book
 function getProductById(product_id){
-
+    var strUrl = ctrUrl+"4&current_product_id="+product_id;
+    var objResult = sendRequest(strUrl);
+    
+    if(objResult.result == 0){
+        return false;
+    }
+    //successfully got product
+    current_product = objResult.singleProduct;
 }
 
 //function to start sell page of a single book
 function sellProduct(product_id){
-
+    alert(product_id);
+    if(!getProductById(product_id)){
+        alert("Could not get product");
+        return;
+    }
+    //display
+    $("#sellBook").load("views/sellProduct.html");   
 }
 
 //update sale cost
 function updateCurrentCost () {
-    var costSingle = document.getElementById('sale_type').options[document.getElementById('sale_type').selectedIndex].value;
-    current_sale_type = document.getElementById('sale_type').options[document.getElementById('sale_type').selectedIndex].id;
-    if(costSingle == 0) {
-        alert("Select a sale type");
-        return;
-    }
-    //set current sale cost single to its value
-    current_sale_cost_single = costSingle;
-    //set current sale quantity
-    current_sale_quantity = $("#quantity_tosell").val();
-    //set current sale total cost
-    current_sale_cost = current_sale_cost_single * current_sale_quantity;
-    document.getElementById('current_sale_cost').innerHTML = current_sale_cost;
+
 }
 
 function addToCart(){
-   cart[cart.length] = [current_book_id, current_sale_type, current_sale_quantity, current_sale_cost_single, current_sale_cost];
-    var currentSale = cart[cart.length];
-    alert(currentSale[0]);
+
 }
 
-
+function sellme(){
+    alert("me");
+}
