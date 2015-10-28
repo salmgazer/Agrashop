@@ -33,6 +33,9 @@ switch($cmd) {
     case 7:
         addSale();
         break;
+    case 8:
+        signOut();
+        break;
     default:
         echo '{"result":0, message:"unknown command"}';
         break;
@@ -80,6 +83,15 @@ function registerUser(){
     }
     echo '{"result": 0, "Failed to add '.$seller_name.' as '.$seller_type.'"}';
     return;
+}
+
+function signOut(){
+    if(session_destroy()){
+        echo '{"result": 1}';
+    }else{
+        echo '{"result": 0}';
+    }
+    
 }
 
 function getUserDetails(){
@@ -153,9 +165,10 @@ function addSale(){
     $quantity_sold = $_REQUEST['quantity_sold'];
     $total_cost = $_REQUEST['total_cost'];
     $buyer_phone = $_REQUEST['buyer_phone'];
+    $seller_username = $_SESSION['username'];
     
     $mysale = new Sale();
-    if(!$mysale->addSale($product_id, $product_price, $quantity_sold, $total_cost, $buyer_phone)){
+    if(!$mysale->addSale($product_id, $product_price, $quantity_sold, $total_cost, $buyer_phone, $seller_username)){
         echo '{"result": 0, "message": "Could not add sale"}';
         return;
     }

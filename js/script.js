@@ -82,6 +82,14 @@ $(function () {
   });
 });
 
+//sign out event
+$(function () {
+  $('#signout').click(function(e) {
+    e.preventDefault();
+    signOut();
+  });
+});
+
 //search event
 $(function () {
   $('#searchInput').keyup(function(e) {
@@ -138,6 +146,17 @@ function registerUser(){
     var objResult = sendRequest(strUrl);
     alert(objResult.message);
 }    
+
+function signOut(){
+    var strUrl = ctrUrl+"8";
+    var objResult = sendRequest(strUrl);
+    
+    if(objResult.result == 0){
+        alert("could not sign out");
+        return;
+    }
+    window.location.href = "index.html";
+}
     
 
 //function to get details of user
@@ -179,7 +198,7 @@ function getProducts(){
     var objResult = sendRequest(strUrl);
 
     if(objResult.result == 0){
-        document.getElementById("searchReport").innerHTML = '<div class="row"><div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>No books with key words '+searchEntry+' found.</strong></div></div>';
+        document.getElementById("searchReport").innerHTML = '<div class="row"><div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>No Products with key words '+searchEntry+' found.</strong></div></div>';
         return;
     }
     var products = objResult.products;
@@ -241,7 +260,13 @@ function addSale(){
     
     if(objesult.result == 0){
         //could not add sale
+        alert("could not add sale");
+        return;
     }
     alert(objesult.message);
+    getProducts();
+    var myProd = getProductById(product_id)[0];
+    
+    document.getElementById("product_quantity_sell").innerHTML = myProd['product_quantity'];
 }
 

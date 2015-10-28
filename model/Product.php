@@ -1,5 +1,5 @@
 <?php
-include "adb.php";
+include_once "adb.php";
 
 /**
  * Class Product
@@ -59,6 +59,12 @@ class Product extends adb{
        $str_sql = "UPDATE product set product_unit_price = $newPrice WHERE product_id = '$product_id'";
        return $this->query($str_sql);
    }
+   
+   function updateQuantity($product_id, $quantity_sold){
+       $newQ =  $this->getProductById($product_id)['product_quantity'] - $quantity_sold;
+       $str_sql = "UPDATE product set product_quantity = $newQ WHERE product_id = '$product_id'";
+       return $this->query($str_sql);
+   }
 
 }
 
@@ -66,3 +72,4 @@ class Product extends adb{
 //echo $prod->addProduct("89hj3", "Apple Iphone", 34, 34.78);
 //echo $prod->getProductById("TV123JJ")['product_name'];
 //echo $prod->getProducts("apple")['product_name'];
+//echo $prod->updateQuantity("TV123JJ", 4);

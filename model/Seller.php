@@ -8,7 +8,7 @@
  */
 
 /* Include adb.php */
-include "adb.php";
+include_once "adb.php";
 
 /**
  * Class Seller
