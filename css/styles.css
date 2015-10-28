@@ -136,3 +136,11 @@
   width: 70%;
   text-align: center;
 }
+
+.sellBtn{
+  margin-bottom: 200px;
+}
+
+#quantity_tosell{
+  margin-bottom: 20px;
+}

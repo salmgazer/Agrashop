@@ -151,10 +151,11 @@ function addSale(){
     $product_id = $_REQUEST['product_id'];
     $product_price = $_REQUEST['product_price'];
     $quantity_sold = $_REQUEST['quantity_sold'];
-    $total_cost = $_REQUEST['$total_cost'];
+    $total_cost = $_REQUEST['total_cost'];
+    $buyer_phone = $_REQUEST['buyer_phone'];
     
     $mysale = new Sale();
-    if(!$mysale->addSale($product_id, $product_price, $quantity_sold, $total_cost)){
+    if(!$mysale->addSale($product_id, $product_price, $quantity_sold, $total_cost, $buyer_phone)){
         echo '{"result": 0, "message": "Could not add sale"}';
         return;
     }

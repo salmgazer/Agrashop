@@ -230,26 +230,18 @@ function updateCurrentCost () {
     document.getElementById("current_sale_cost_sell").innerHTML = quantity * price + "";
 }
 
-function sell(){
-    alert("I am selling");
-}
-
 function addSale(){
-    alert("here");
-   // var product_id = document.getElementById("product_id_sell").innerHTML;
-    //var product_price = document.getElementById("product_unit_price_sell").innerHTML * 1;
-    //var quantity_sold = $("#product_quantity_sell").val();
-    //var total_cost = product_price * quantity_sold;
-    //alert(product_id);
-    //alert(product_price);
-    //alert(quantity_sold);
-    //alert(total_cost);
-    return;
-    //var strUrl = ctrUrl+"7&product_id="+product_id+"&product_price="+product_price+"&quantity_sold="+quantity_sold+"&total_cost="+total_cost;
-    //var objesult = sendRequest(strUrl);
+    var product_id = document.getElementById("product_id_sell").innerHTML;
+    var product_price = document.getElementById("product_unit_price_sell").innerHTML * 1;
+    var quantity_sold = $("#quantity_tosell").val() * 1;
+    var total_cost = product_price * quantity_sold;
+    var buyer_phone = $("#buyer_phone").val() + "";
+    var strUrl = ctrUrl+"7&product_id="+product_id+"&product_price="+product_price+"&quantity_sold="+quantity_sold+"&total_cost="+total_cost+"&buyer_phone="+buyer_phone;
+    var objesult = sendRequest(strUrl);
     
-    //if(objesult.result == 0){
-        //do something
-    //}
+    if(objesult.result == 0){
+        //could not add sale
+    }
+    alert(objesult.message);
 }
 

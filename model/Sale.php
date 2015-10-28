@@ -6,8 +6,8 @@ include "adb.php";
  */
  class Sale extends adb{
      
-     function addSale($product_id, $product_price, $quantity_sold, $total_cost){
-         $str_sql = "INSERT into (product_id, product_price, quantity_sold, total_cost) values ('$product_id', $product_price, $quantity_sold, $total_cost)";
+     function addSale($product_id, $product_price, $quantity_sold, $total_cost, $buyer_phone){
+         $str_sql = "INSERT into sales(product_id, product_price, quantity_sold, total_cost, buyer_phone) values ('$product_id', $product_price, $quantity_sold, $total_cost, '$buyer_phone')";
          return $this->query($str_sql);
      }
      
@@ -19,5 +19,8 @@ include "adb.php";
          return $this->fetch();
      }
 }
+
+//$sale = new Sale();
+//echo $sale->addSale("898jhbh", 88, 5, (88 * 5));
 
 ?>
