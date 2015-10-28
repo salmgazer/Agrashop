@@ -30,6 +30,9 @@ switch($cmd) {
     case 6:
         addProduct();
         break;
+    case 7:
+        addSale();
+        break;
     default:
         echo '{"result":0, message:"unknown command"}';
         break;
@@ -139,6 +142,23 @@ function getProductById(){
         return;
     }
     echo '{"result": 1, "singleProduct": ['.json_encode($singleProduct).']}';
+    return;
+}
+
+function addSale(){
+    include_once "../model/Sale.php";
+    
+    $product_id = $_REQUEST['product_id'];
+    $product_price = $_REQUEST['product_price'];
+    $quantity_sold = $_REQUEST['quantity_sold'];
+    $total_cost = $_REQUEST['$total_cost'];
+    
+    $mysale = new Sale();
+    if(!$mysale->addSale($product_id, $product_price, $quantity_sold, $total_cost)){
+        echo '{"result": 0, "message": "Could not add sale"}';
+        return;
+    }
+    echo '{"result": 1, "message": "Sale has been recorded"}';
     return;
 }
 
