@@ -28,6 +28,7 @@
   <component name="FileEditorManager">
     <leaf>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="Member.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Member.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,10 +53,15 @@
 =======
       <file leaf-file-name="Book.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Book.php">
+=======
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/script.js">
+>>>>>>> refs/remotes/origin/salifu
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
               <folding>
+<<<<<<< HEAD
                 <marker date="1443912819178" expanded="true" signature="96:114" placeholder="SELECT * FRO..book..." />
 >>>>>>> Agrashop/master
               </folding>
@@ -70,12 +76,15 @@
             <state vertical-scroll-proportion="0.1611842">
               <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
               <folding>
+=======
+>>>>>>> refs/remotes/origin/salifu
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/controller.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -86,10 +95,15 @@
 =======
       <file leaf-file-name="Member.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/Member.php">
+=======
+      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Product.php">
+>>>>>>> refs/remotes/origin/salifu
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.087628864">
-              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state vertical-scroll-proportion="-42.5">
+              <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
               <folding>
+<<<<<<< HEAD
                 <element signature="e#7#89#0#PHP" expanded="true" />
                 <element signature="n#checkAdminPass#0;n#Member#0;n#!!top" expanded="false" />
                 <element signature="n#addShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
@@ -106,6 +120,40 @@
                 <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
                 <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
 >>>>>>> Agrashop/master
+=======
+                <marker date="1445961739921" expanded="true" signature="286:362" placeholder="select * fro..product..." />
+                <marker date="1445961739921" expanded="true" signature="738:810" placeholder="select * fro..product..." />
+                <marker date="1445961739921" expanded="true" signature="1270:1433" placeholder="INSERT INTO ..." />
+                <marker date="1445961739921" expanded="true" signature="1634:1716" placeholder="UPDATE produ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sale.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/Sale.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6718213">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <marker date="1445984238048" expanded="true" signature="181:315" placeholder="INSERT into ..." />
+                <marker date="1445984238048" expanded="true" signature="418:437" placeholder="SELECT * fro..sales..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Seller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Seller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-55.076923">
+              <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+              <folding>
+                <marker date="1445961813630" expanded="true" signature="318:416" placeholder="SELECT * fro..seller..." />
+                <marker date="1445961813630" expanded="true" signature="1291:1514" placeholder="INSERT INTO ..." />
+                <marker date="1445961813630" expanded="true" signature="1754:1868" placeholder="SELECT * FRO..seller..." />
+                <marker date="1445961813630" expanded="true" signature="2361:2434" placeholder="SELECT * FRO..seller..." />
+>>>>>>> refs/remotes/origin/salifu
               </folding>
             </state>
           </provider>
@@ -114,8 +162,8 @@
       <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.615385">
-              <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+            <state vertical-scroll-proportion="14.230769">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,10 +189,13 @@
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/model/Member.php" />
-        <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/js/jquery.js" />
-        <option value="$PROJECT_DIR$/controller/controller.php" />
         <option value="$PROJECT_DIR$/model/Book.php" />
+        <option value="$PROJECT_DIR$/js/script.js" />
+        <option value="$PROJECT_DIR$/model/Product.php" />
+        <option value="$PROJECT_DIR$/model/Seller.php" />
+        <option value="$PROJECT_DIR$/controller/controller.php" />
+        <option value="$PROJECT_DIR$/model/Sale.php" />
       </list>
     </option>
   </component>
@@ -187,6 +238,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,56 +254,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Agrashop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agrashop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agrashop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agrashop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agrashop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agrashop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agrashop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="SalesManager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,7 +315,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="745" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -358,26 +367,25 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/js/jquery.js">
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
@@ -392,16 +400,55 @@
     <entry file="file://$PROJECT_DIR$/controller/controller.php">
 =======
 >>>>>>> Agrashop/master
+=======
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+>>>>>>> refs/remotes/origin/salifu
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <marker date="1443914374701" expanded="true" signature="297:313" placeholder="..." />
 =======
             <element signature="n#!!doc" expanded="false" />
 >>>>>>> Agrashop/master
+=======
+            <element signature="e#0#41#0" expanded="false" />
+>>>>>>> refs/remotes/origin/salifu
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -417,31 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#89#0#PHP" expanded="true" />
-            <element signature="n#checkAdminPass#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#addShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#addAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#signInShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#signInAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#checkShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#checkAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <marker date="1443900434907" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1443900434907" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
-            <marker date="1443900434907" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
-            <marker date="1443900434907" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1443900434907" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..shopadmin..." />
-            <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -449,9 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -474,6 +493,53 @@
             <marker date="1443914374701" expanded="true" signature="297:313" placeholder="..." />
           </folding>
 =======
+          <folding />
+>>>>>>> Agrashop/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="65" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="65" />
+<<<<<<< HEAD
+          <folding>
+            <marker date="1443914374701" expanded="true" signature="297:313" placeholder="..." />
+          </folding>
+=======
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
           <folding />
 >>>>>>> Agrashop/master
         </state>
@@ -508,80 +574,8 @@
             <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
             <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="65" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="65" />
-<<<<<<< HEAD
-          <folding>
-            <marker date="1443914374701" expanded="true" signature="297:313" placeholder="..." />
-          </folding>
 =======
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
->>>>>>> Agrashop/master
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#89#0#PHP" expanded="true" />
-            <element signature="n#checkAdminPass#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#addShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#addAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#signInShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#signInAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#checkShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#checkAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <marker date="1443900434907" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1443900434907" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
-            <marker date="1443900434907" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
-            <marker date="1443900434907" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1443900434907" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..shopadmin..." />
-            <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
-          </folding>
+>>>>>>> refs/remotes/origin/salifu
         </state>
       </provider>
     </entry>
@@ -589,9 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,30 +607,6 @@
 =======
           <folding />
 >>>>>>> Agrashop/master
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#89#0#PHP" expanded="true" />
-            <element signature="n#checkAdminPass#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#addShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#addAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#signInShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#signInAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#checkShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
-            <element signature="n#checkAdmin#0;n#Member#0;n#!!top" expanded="false" />
-            <marker date="1443900434907" expanded="true" signature="228:302" placeholder="SELECT * fro..shopadmin..." />
-            <marker date="1443900434907" expanded="true" signature="931:1167" placeholder="INSERT INTO ..." />
-            <marker date="1443900434907" expanded="true" signature="1560:1725" placeholder="INSERT INTO ..." />
-            <marker date="1443900434907" expanded="true" signature="1875:2009" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1443900434907" expanded="true" signature="2419:2532" placeholder="SELECT * FRO..shopadmin..." />
-            <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
-            <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -668,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,9 +643,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029259896">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7079038">
+          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -701,6 +671,7 @@
             <marker date="1443914374701" expanded="true" signature="297:313" placeholder="..." />
 =======
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.029259896">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
@@ -719,6 +690,10 @@
         <state vertical-scroll-proportion="0.5246711">
           <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
 >>>>>>> Agrashop/master
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+>>>>>>> refs/remotes/origin/salifu
           <folding>
             <element signature="e#7#89#0#PHP" expanded="true" />
             <element signature="n#checkAdminPass#0;n#Member#0;n#!!top" expanded="false" />
@@ -740,6 +715,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1611842">
@@ -748,38 +724,48 @@
             <element signature="e#0#41#0" expanded="false" />
 =======
     <entry file="file://$PROJECT_DIR$/index.html">
+=======
+    <entry file="file://$PROJECT_DIR$/model/Product.php">
+>>>>>>> refs/remotes/origin/salifu
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7079038">
-          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+        <state vertical-scroll-proportion="-42.5">
+          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1445961739921" expanded="true" signature="286:362" placeholder="select * fro..product..." />
+            <marker date="1445961739921" expanded="true" signature="738:810" placeholder="select * fro..product..." />
+            <marker date="1445961739921" expanded="true" signature="1270:1433" placeholder="INSERT INTO ..." />
+            <marker date="1445961739921" expanded="true" signature="1634:1716" placeholder="UPDATE produ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Seller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-55.076923">
+          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+          <folding>
+            <marker date="1445961813630" expanded="true" signature="318:416" placeholder="SELECT * fro..seller..." />
+            <marker date="1445961813630" expanded="true" signature="1291:1514" placeholder="INSERT INTO ..." />
+            <marker date="1445961813630" expanded="true" signature="1754:1868" placeholder="SELECT * FRO..seller..." />
+            <marker date="1445961813630" expanded="true" signature="2361:2434" placeholder="SELECT * FRO..seller..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.615385">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+        <state vertical-scroll-proportion="14.230769">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Book.php">
+    <entry file="file://$PROJECT_DIR$/model/Sale.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6718213">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <marker date="1443912819178" expanded="true" signature="96:114" placeholder="SELECT * FRO..book..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.087628864">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding>
+<<<<<<< HEAD
             <element signature="e#7#89#0#PHP" expanded="true" />
             <element signature="n#checkAdminPass#0;n#Member#0;n#!!top" expanded="false" />
             <element signature="n#addShopkeeper#0;n#Member#0;n#!!top" expanded="false" />
@@ -796,6 +782,10 @@
             <marker date="1443900434907" expanded="true" signature="2920:3005" placeholder="SELECT * FRO..shopkeeper..." />
             <marker date="1443900434907" expanded="true" signature="3216:3290" placeholder="SELECT * FRO..shopadmin..." />
 >>>>>>> Agrashop/master
+=======
+            <marker date="1445984238048" expanded="true" signature="181:315" placeholder="INSERT into ..." />
+            <marker date="1445984238048" expanded="true" signature="418:437" placeholder="SELECT * fro..sales..." />
+>>>>>>> refs/remotes/origin/salifu
           </folding>
         </state>
       </provider>
