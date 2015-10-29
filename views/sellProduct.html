@@ -1,0 +1,31 @@
+<div class="col-sm-2" style="margin-top: 30px;">
+    <div class="book-content">
+    <div id="book_cover">
+        </div>
+      <h5 class="book-title" id="product_name"></h5>
+      <h6 class="author"><span class="author-icon"> </span> ID: <span id="product_id_Sell"></span></h6>
+      <h5 class="quantity">Quantity Available: <span id="product_quantity_sell"></span></h5>
+      <h6>Retail: <span class="retail_price"> GH¢<strong id="product_unit_price_sell"></strong></span></h6>
+    </div>
+  </div>
+
+<div class="col-sm-8">
+	<h4 class="seller">Seller: <strong class="blue-text" id="seller_username_Sell"></strong></h4>
+
+	<div class="form-group col-sm-6">
+      <label class="control-label" for="quantity_tosell">Quantity : <b>(Only <strong class="red-text" id="available"></strong> is/are available)</b></label>
+      <div class="controls">
+          <input name="quantity_tosell" id="quantity_tosell" type="number" value="" placeholder="0" class="form-control quantity" onkeyup="updateCurrentCost()" onchange="updateCurrentCost()"/>
+      </div>
+    </div>
+
+    <div class="col-sm-10" id="sale_cost">
+    	<h3 class="blue-text">Sale cost: GH¢ <b id="current_sale_cost"> 0</b></h3>
+    </div>
+    <div class="col-sm-12">
+        <button class="btn btn-success add-to-cart" onclick="sell()">Sell</button>
+    </div>
+   <!-- <div class="col-sm-6">
+    	<button class="btn btn-primary cancel_shopping">Cancel sale</button>
+    </div>-->
+</div>

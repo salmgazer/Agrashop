@@ -1,6 +1,40 @@
 /**
  * Created by Salifu on 9/5/2015.
  */
+
+//controller url
+var ctrUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/SalesManager/controller/controller.php?cmd=";
+//stores id of selected book
+//var current_book_id = -10;
+//stores details of a selected book
+//var current_book = [];
+//stores details of a sale
+//var cart = [];
+
+//stores the latest cart's id
+//var latest_cart_id;
+
+//Array to store current sale
+/*var sale = {
+    book_id: -10,
+    sale_type: "none",
+    quantity: 0,
+    singleCost: 0,
+    totalCost: 0
+};
+*/
+
+//current sale details
+var current_sale_cost_single;
+var current_sale_quantity;
+var current_sale_cost;
+var current_product;
+
+//user details
+var current_username;
+var current_usertype;
+
+//in charge of login page animations
 $(function() {
 
     $('#login-form-link').click(function(e) {
@@ -20,6 +54,7 @@ $(function() {
 
 });
 
+//Ajax sendRequest function
 function sendRequest(u){
     // Send request to server
     //u a url as a string
@@ -31,6 +66,7 @@ function sendRequest(u){
 
 }
 
+//signIn events
 $(function () {
   $('#login-form').submit(function(e) {
     e.preventDefault();
@@ -38,15 +74,43 @@ $(function () {
   });
 });
 
+//Register user events
+$(function () {
+  $('#register-form').submit(function(e) {
+    e.preventDefault();
+    registerUser();
+  });
+});
+
+//sign out event
+$(function () {
+  $('#signout').click(function(e) {
+    e.preventDefault();
+    signOut();
+  });
+});
+
+//search event
+$(function () {
+  $('#searchInput').keyup(function(e) {
+    e.preventDefault();
+    getProducts();
+  });
+});
+
+//search event
+$(function () {
+  $('#addProduct_form').submit(function(e) {
+    e.preventDefault();
+    addProduct();
+  });
+});
+
+//sign in function
 function signIn(){
     var username = $("#username").val();
     var password = $("#password").val();
-    var user_type = $("#user_type").val();
 
-    if(user_type == 0){
-        alert("You must choose a user type");
-        return;
-    }
     if(username.length <= 1){
         alert("Enter correct username");
         return;
@@ -57,44 +121,154 @@ function signIn(){
         return;
     }
 
-    var strUrl = "controller/controller.php?cmd=1&username="+username+"&password="+password+"&user_type="+user_type;
+    var strUrl = ctrUrl+"1&username="+username+"&password="+password;
     var objResult = sendRequest(strUrl);
     if(objResult.result == 0){
         alert(objResult.message);
         return;
     }
+    getUserDetails();
     window.location.href = "home.html";
-    print(" Welcome " + getUsername());
     }
 
+function registerUser(){
+    var seller_name = $("#seller_name").val();
+    var seller_username = $("#seller_username").val();
+    var seller_password = $("#seller_password").val();
+    var seller_phone = $("#seller_phone").val();
+    var seller_type = $("#seller_type").find(":selected").text();
+    var admin_password = $("#admin_password").val();
+    
+    var strUrl = ctrUrl+"5&seller_name="+seller_name+"&seller_username="+seller_username+"&seller_password="+seller_password+
+    "&seller_phone="+seller_phone+"&seller_type="+seller_type+"&admin_password="+admin_password;
+    
+    var objResult = sendRequest(strUrl);
+    alert(objResult.message);
+}    
+
+function signOut(){
+    var strUrl = ctrUrl+"8";
+    var objResult = sendRequest(strUrl);
+    
+    if(objResult.result == 0){
+        alert("could not sign out");
+        return;
+    }
+    window.location.href = "index.html";
+}
+    
+
+//function to get details of user
 function getUserDetails(){
-    var strUrl = "controller/controller.php?cmd=2";
+    var strUrl = ctrUrl+"2";
     var objResult = sendRequest(strUrl);
 
     if(objResult.result == 0){
-        alert("nothing");
         alert(objResult.message);
         window.location.href = "index.html";
         return;
     }
-    alert(objResult.username+"  "+objResult.user_type);
+    current_username = objResult.username;
+    current_usertype = objResult.user_type;
     return;
 }
 
-function getBooks(){
-    var strUrl = "controller/controller.php?cmd=3";
+function addProduct(){
+    var product_id = $("#product_id").val();
+    var product_name = $("#product_name").val();
+    var product_quantity = $("#product_quantity").val();
+    var product_unit_price = $("#product_unit_price").val();
+
+    var strUrl = ctrUrl+"6&product_id="+product_id+"&product_name="+product_name+"&product_quantity="+product_quantity+"&product_unit_price="+product_unit_price;
+    var objResult = sendRequest(strUrl);
+    if(objResult.result == 0){
+
+    }else{
+
+    }
+    alert(objResult.message);
+}
+
+//Function to get all books in search query
+function getProducts(){
+    var searchEntry = $("#searchInput").val();
+    var strUrl = ctrUrl+"3&searchEntry="+searchEntry;
     var objResult = sendRequest(strUrl);
 
     if(objResult.result == 0){
-        alert("no books");
+        document.getElementById("searchReport").innerHTML = '<div class="row"><div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>No Products with key words '+searchEntry+' found.</strong></div></div>';
         return;
     }
-    var books = objResult.books;
-    for(i = 0; i < books.length; i++){
-        var singleBook = document.createElement("div");
+    var products = objResult.products;
+    document.getElementById("books").innerHTML = "";
+    for(var i = 0; i < products.length; i++){
+        var singleProduct = document.createElement("div");
+        var product_id = products[i]['product_id'];
 
-        singleBook.innerHTML = '<div class="col-sm-2" style="margin-bottom: 50px;"><div class="book-content"><img src="" class="book_cover" /><h5 class="book-title">'+books[i]['title']+'</h5><h6 class="author"><span class="author-icon"> </span> Author: <span>'+books[i]['author']+'</span></h6><h6 class="publisher">Publisher: <span>'+books[i]['publisher']+'</span></h6><h6 class="book-subject">Subject: <span>'+books[i]['subject']+'</span></h6><h5 class="quantity">Quantity: <span>'+books[i]['quantity']+'</span></h5><h6>Retail: <span class="retail_price"> GH¢'+books[i]['retail_price']+'</span></h6><h6>Wholesale: <span class="wholesale_price"> GH¢'+books[i]['wholesale_price']+'</span></h6><div><a href="" class="btn btn-default update-book"> Update Book</a><a href="" class="btn btn-default sell-book">Sell Book</a></div></div></div><div id="nextbook"></div>';
+        singleProduct.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><img src="" class="book_cover"/><h5 class="book-title">'+products[i]['product_name']+'</h5><h5>ID: '+product_id+'</h5><h6 class="publisher">Price: <span>Gh&#8373; '+products[i]['product_unit_price']+'</span></h6><h5 class="quantity">Quantity: <span>'+products[i]['product_quantity']+'</span></h5><div><button class="btn btn-default sell-book" onclick=sellProduct("'+product_id+'")>Sell Product</button></div></div></div>';
 
-        document.getElementById("books").appendChild(singleBook);
+        document.getElementById("books").appendChild(singleProduct);
     }
 }
+
+//function to get details of a book
+function getProductById(product_id){
+    var strUrl = ctrUrl+"4&current_product_id="+product_id;
+    var objResult = sendRequest(strUrl);
+    
+    if(objResult.result == 0){
+        return "false";
+    }
+    //successfully got product
+    return objResult.singleProduct;
+}
+
+//function to start sell page of a single book
+function sellProduct(product_id){
+   // $("#sellBook").load("views/sellProduct.html"); 
+   window.location.href = "#sellBook"; 
+    var theProduct = getProductById(product_id);
+    if(theProduct == "false"){
+        alert("Could not get product");
+        return;
+    }
+    var myProd = theProduct[0];
+    //alert(myProd['product_name']);
+    document.getElementById("seller_username_Sell").innerHTML = current_username;
+    document.getElementById("product_name_sell").innerHTML = myProd['product_name'];
+    document.getElementById("product_id_sell").innerHTML = myProd['product_id'];
+    document.getElementById("product_quantity_sell").innerHTML = myProd['product_quantity'];
+    document.getElementById("product_unit_price_sell").innerHTML = myProd['product_unit_price']; 
+}
+
+//update sale cost
+function updateCurrentCost () {
+    var quantity = $("#quantity_tosell").val();
+    var price = document.getElementById("product_unit_price_sell").innerHTML * 1;
+    document.getElementById("current_sale_cost_sell").innerHTML = quantity * price + "";
+}
+
+function addSale(){
+    var product_id = document.getElementById("product_id_sell").innerHTML;
+    var product_price = document.getElementById("product_unit_price_sell").innerHTML * 1;
+    var quantity_sold = $("#quantity_tosell").val() * 1;
+    var total_cost = product_price * quantity_sold;
+    var buyer_phone = $("#buyer_phone").val() + "";
+    var strUrl = ctrUrl+"7&product_id="+product_id+"&product_price="+product_price+"&quantity_sold="+quantity_sold+"&total_cost="+total_cost+"&buyer_phone="+buyer_phone;
+    var objesult = sendRequest(strUrl);
+    
+    if(objesult.result == 0){
+        //could not add sale
+        alert("could not add sale");
+        return;
+    }
+    if(buyer_phone.length >= 10){
+        var strUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/SalesManager/model/sendSMS.php?phone="+buyer_phone;
+    }
+    alert(objesult.message);
+    getProducts();
+    var myProd = getProductById(product_id)[0];
+    
+    document.getElementById("product_quantity_sell").innerHTML = myProd['product_quantity'];
+}
+

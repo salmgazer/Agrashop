@@ -1,4 +1,5 @@
-<?php session_start();
+<?php header('Access-Control-Allow-Origin: *');
+ session_start();
 /**
  * Created by PhpStorm.
  * User: Salifu
@@ -19,7 +20,22 @@ switch($cmd) {
         getUserDetails();
         break;
     case 3:
-        getBooks();
+        getProducts();
+        break;
+    case 4:
+        getProductById();
+        break;
+    case 5:
+        registerUser();
+        break;
+    case 6:
+        addProduct();
+        break;
+    case 7:
+        addSale();
+        break;
+    case 8:
+        signOut();
         break;
     default:
         echo '{"result":0, message:"unknown command"}';
@@ -32,36 +48,51 @@ switch($cmd) {
 function signIn(){
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
-    $user_type = $_REQUEST['user_type'];
 
-    include "../model/Member.php";
-    $member = new Member();
-
-    if($user_type == "1"){
-        if($member->signInShopkeeper($username, $password)){
-            $_SESSION['username'] = $username;
-            $_SESSION['password'] = $password;
-            $_SESSION['user_type'] = $user_type;
-            echo '{"result": 1, "message": "Signed in successfully as shopkeeper"}';
+    include_once "../model/Seller.php";
+    $seller = new Seller();
+    if($seller->signInShopkeeper($username, $password)){
+        echo '{"result": 1, "message": "Signed in successfully"}';
             return;
-        }else{
-            echo '{"result": 0, "message": "Sign in as shopkeeper unsuccessful"}';
-            return;
-        }
     }
-    else if($user_type == "2"){
-        if($member->signInAdmin($username, $password)){
-            $_SESSION['username'] = $username;
-            $_SESSION['password'] = $password;
-            $_SESSION['user_type'] = $user_type;
-            echo '{"result": 1, "message": "Signed in successfully as admin"}';
-            return;
-        }else{
-            echo '{"result": 0, "message": "Sign in as admin was unsuccessful"}';
-            return;
-        }
-    }
+    echo '{"result": 0, "message": "Sign in was unsuccessful"}';
+    return;
+}
 
+function registerUser(){
+    $seller_name = $_REQUEST['seller_name'];
+    $seller_username = $_REQUEST['seller_username'];
+    $seller_password = $_REQUEST['seller_password'];
+    $seller_phone = $_REQUEST['seller_phone'];
+    $seller_type = $_REQUEST['seller_type'];
+    $admin_password = $_REQUEST['admin_password'];
+    
+    include_once "../model/Seller.php";
+    $seller = new Seller();
+    $adduser = $seller->addShopKeeper($seller_name, $seller_username, $seller_password, $seller_phone, $seller_type, $admin_password);
+    if($adduser == "wrong admin password!"){
+        echo '{"result": 0, "message": "'.$adduser.'"}';
+        return;
+    }
+    if($adduser == "existing username"){
+        echo '{"result": 0, "message": "'.$adduser.'"}';
+        return;
+    }
+    if($adduser){
+        echo '{"result": 1, "message": "You successfully added '.$seller_name.' as a '.$seller_type.'"}';
+        return;
+    }
+    echo '{"result": 0, "Failed to add '.$seller_name.' as '.$seller_type.'"}';
+    return;
+}
+
+function signOut(){
+    if(session_destroy()){
+        echo '{"result": 1}';
+    }else{
+        echo '{"result": 0}';
+    }
+    
 }
 
 function getUserDetails(){
@@ -69,29 +100,80 @@ function getUserDetails(){
         echo '{"result": 1, "username": "'.$_SESSION['username'].'", "user_type": "'.$_SESSION['user_type'].'"}';
         return;
     }
-   // session_destroy();
+   //session_destroy();
     echo '{"result": 0, "message": "You need to sign in first"}';
     return;
 }
 
-function getBooks(){
-    include "../model/Book.php";
 
-    $book = new Book();
-    $books = $book->getBooks();
-    if(!$books){
-        echo '{"result": 0, "message": "No books yet"}';
+function addProduct(){
+    $product_id = $_REQUEST['product_id'];
+    $product_name = $_REQUEST['product_name'];
+    $product_quantity = $_REQUEST['product_quantity'];
+    $product_unit_price = $_REQUEST['product_unit_price'];
+
+    include_once "../model/Product.php";
+    $product = new Product();
+    if($product->addProduct($product_id, $product_name, $product_quantity, $product_unit_price)){
+        echo '{"result": 1, "message": "'.$product_name.' has been added"}';
         return;
     }
-    echo '{"result": 1, "books": [';
-    while($books){
-        echo json_encode($books);
-        $books = $book->fetch();
-        if($books){
+    echo '{"result": 0, "message": "'.$product_name.' has not been added"}';
+    return;
+}
+
+function getProducts(){
+    include_once "../model/Product.php";
+    $searchEntry = $_REQUEST['searchEntry'];
+    $product = new Product();
+    $products = $product->getProducts($searchEntry);
+    if(!$products){
+        echo '{"result": 0, "message": "No products yet"}';
+        return;
+    }
+    echo '{"result": 1, "products": [';
+    while($products){
+        echo json_encode($products);
+        $products = $product->fetch();
+        if($products){
             echo ",";
         }
     }
     echo ']}';
+    return;
+}
+
+function getProductById(){
+    include_once "../model/Product.php";
+
+    $current_product_id = $_REQUEST['current_product_id'];
+    $product = new Product();
+    $singleProduct = $product->getProductById($current_product_id);
+
+    if(!$singleProduct){
+        echo '{"result": 0, "message": "No such product"}';
+        return;
+    }
+    echo '{"result": 1, "singleProduct": ['.json_encode($singleProduct).']}';
+    return;
+}
+
+function addSale(){
+    include_once "../model/Sale.php";
+    
+    $product_id = $_REQUEST['product_id'];
+    $product_price = $_REQUEST['product_price'];
+    $quantity_sold = $_REQUEST['quantity_sold'];
+    $total_cost = $_REQUEST['total_cost'];
+    $buyer_phone = $_REQUEST['buyer_phone'];
+    $seller_username = $_SESSION['username'];
+    
+    $mysale = new Sale();
+    if(!$mysale->addSale($product_id, $product_price, $quantity_sold, $total_cost, $buyer_phone, $seller_username)){
+        echo '{"result": 0, "message": "Could not add sale"}';
+        return;
+    }
+    echo '{"result": 1, "message": "Sale has been recorded"}';
     return;
 }
 

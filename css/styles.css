@@ -7,13 +7,144 @@
 }
 
 .searchForm{
+    width: 100%;
+}
+
+.searchArea{
+  width: 400px;
 }
 .searchInput{
     border: 1px solid rgba(0,0,0,0.15);
     border-radius: 999em;
-    height: 60px;
-    font-weight: lighter;
+    height: 40px;
+    font-weight: 0.3px;
     text-align: center;
-    font-size: 30px;
+    font-size: 18x;
     font-family: "Arial", sans-serif;
+    width: 500px;
+}
+
+.book_cover{
+    min-width: 150px;
+}
+
+.book-title{
+    color: blue;
+    font-weight: bolder;
+    font-family: "Georgia", "helvetica",sans-serif;
+    font-size: 18px;
+}
+.author{
+  color: #004B91;
+  text-decoration: underline;
+}
+
+.author-icon{
+  color: #996633;
+}
+
+.retail_price{
+  color: #CC0000;
+  font-size: 18px;
+}
+
+.wholesale_price{
+  color: #900;
+  font-size: 18px;
+}
+
+.update-book{
+  color: green;
+  border-color: green;
+  width: 110px;
+  margin-bottom: 5px;
+}
+.update-book:hover{
+  color: #ffffff;
+  background-color: green;
+  border-color: green;
+}
+.update-book:active{
+  color: #ffffff;
+  background-color: green;
+  border-color: green;
+}
+
+.sell-book{
+  color: green;
+  border-color: green;
+  width: 120px;
+}
+.sell-book:hover{
+  color: #ffffff;
+  background-color: forestgreen;
+  border-color: greenyellow;
+}
+.sell-book:active{
+  color: #ffffff;
+  background-color: forestgreen;
+  border-color: greenyellow;
+}
+
+.add-new-book{
+  border-color: green;
+}
+
+.add-new-book:hover{
+  background-color: green;
+}
+
+.search-form{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.red-text{
+  color: red;
+}
+
+.blue-text{
+  color: blue;
+}
+
+.cancel_shopping{
+  margin-top: 70px;
+}
+
+.checkout{
+  border-radius: 0px;
+  float: right;
+}
+
+.seller{
+  margin-bottom: 20px;
+}
+
+.ISBN{
+  color: green;
+}
+
+.alert{
+    text-align: center;
+}
+
+#cart_state{
+    margin-right: 50px;
+}
+
+.btn-register{
+  width: 70%;
+  text-align: center;
+}
+
+.sellBtn{
+  margin-bottom: 200px;
+}
+
+#quantity_tosell{
+  margin-bottom: 20px;
+}
+
+nav{
+  margin-top: -80px;
 }

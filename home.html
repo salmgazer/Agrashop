@@ -4,35 +4,122 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+    <script type="text/javascript" charset="utf-8"></script>-->
+
     <meta charset="UTF-8">
     <title></title>
 </head>
+        <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="./home.html">POS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="addProduct.html" id="addProductBtn">Add Product</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Update Product</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search" id="searchArea">
+        <div class="">
+            <form class="form-group searchForm" id="searchForm">
+                <input class="form-control searchInput" name="searchInput" placeholder="search here" id="searchInput">
+            </form>
+        </div>
+         <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" id="signout">Sign Out</a></li>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
     <div class="container">
         <div class="row">
             <div>
 
             </div>
         </div>
-        <div class="row">
-            <form class="form-group col-sm-8 col-md-offset-2 searchForm" id="searchForm">
-                <input class="form-control searchInput" name="searchInput" placeholder="search here" id="searchInput">
-            </form>
+
+        <div id="searchReport">
+
         </div>
+        
+
+        </div>
+        <div class="container">
         <!--books-->
         <div id="books">
-            <div id="nextbook"></div>
+
         </div>
+        
+        <!-- Add Product -->
+        <div class="addProductArea" id="addProductArea">
+            
+        </div>
+        
+        <!--Sell books-->
+        <div class="sellBook col-lg-12" id="sellBook">
+            <div class="col-sm-2" style="margin-top: 30px;">
+    <div class="book-content">
+    <div id="book_cover">
+        </div>
+      <h5 class="book-title" id="product_name_sell"></h5>
+      <h6 class="author"><span class="author-icon"> </span> ID: <span id="product_id_sell"></span></h6>
+      <h5 class="quantity">Quantity: <span id="product_quantity_sell"></span></h5>
+      <h6>Price: <span class="retail_price"> GH¢<strong id="product_unit_price_sell"></strong></span></h6>
+    </div>
+  </div>
+
+<div class="col-sm-8">
+	<h4 class="seller">Seller: <strong class="blue-text" id="seller_username_Sell"></strong></h4>
+
+	<div class="form-group col-sm-6">
+      <label class="control-label" for="quantity_tosell">Quantity</label>
+      <div class="controls">
+          <input name="quantity_tosell" id="quantity_tosell" type="number" value="" placeholder="0" class="form-control quantity" onkeyup="updateCurrentCost()" onchange="updateCurrentCost()"/>
+      </div>
+      <label class="control-label" for="buyer_phone">Buyer's phone</label>
+      <div class="controls">
+          <input name="buyer_phone" id="buyer_phone" type="tel" value="" placeholder="" class="form-control quantity"/>
+      </div>
     </div>
 
+    <div class="col-sm-10" id="sale_cost">
+    	<h3 class="blue-text">Sale cost: GH¢ <b id="current_sale_cost_sell"> 0</b></h3>
+    </div>
+    <div class="col-sm-12 sellBtn">
+        <button class="btn btn-success add-to-cart" onclick=addSale()>Sell</button>
+    </div>
+   <!-- <div class="col-sm-6">
+    	<button class="btn btn-primary cancel_shopping">Cancel sale</button>
+    </div>-->
+</div>
+    </div>
+</div>
 <body>
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
+    
     <script type="text/javascript">
         $(document).ready(function(){
-           // getUserDetails();
-            getBooks();
+            getUserDetails();
+            getProducts();
+           // $("#sellBook").load('views/sellBook.html');
         });
     </script>
 </body>
