@@ -3,7 +3,7 @@
  */
 
 //controller url
-var ctrUrl = "controller/controller.php?cmd=";
+var ctrUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/SalesManager/controller/controller.php?cmd=";
 //stores id of selected book
 //var current_book_id = -10;
 //stores details of a selected book
@@ -107,7 +107,6 @@ $(function () {
 });
 
 //sign in function
-
 function signIn(){
     var username = $("#username").val();
     var password = $("#password").val();
@@ -182,7 +181,6 @@ function addProduct(){
 
     var strUrl = ctrUrl+"6&product_id="+product_id+"&product_name="+product_name+"&product_quantity="+product_quantity+"&product_unit_price="+product_unit_price;
     var objResult = sendRequest(strUrl);
-    alert("me");
     if(objResult.result == 0){
 
     }else{
@@ -194,7 +192,7 @@ function addProduct(){
 //Function to get all books in search query
 function getProducts(){
     var searchEntry = $("#searchInput").val();
-    var strUrl = "controller/controller.php?cmd=3&searchEntry="+searchEntry;
+    var strUrl = ctrUrl+"3&searchEntry="+searchEntry;
     var objResult = sendRequest(strUrl);
 
     if(objResult.result == 0){
@@ -227,7 +225,8 @@ function getProductById(product_id){
 
 //function to start sell page of a single book
 function sellProduct(product_id){
-   // $("#sellBook").load("views/sellProduct.html");  
+   // $("#sellBook").load("views/sellProduct.html"); 
+   window.location.href = "#sellBook"; 
     var theProduct = getProductById(product_id);
     if(theProduct == "false"){
         alert("Could not get product");
@@ -262,6 +261,9 @@ function addSale(){
         //could not add sale
         alert("could not add sale");
         return;
+    }
+    if(buyer_phone.length >= 10){
+        var strUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/SalesManager/model/sendSMS.php?phone="+buyer_phone;
     }
     alert(objesult.message);
     getProducts();

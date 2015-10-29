@@ -1,4 +1,5 @@
-<?php session_start();
+<?php header('Access-Control-Allow-Origin: *');
+ session_start();
 /**
  * Created by PhpStorm.
  * User: Salifu
@@ -59,7 +60,7 @@ function signIn(){
 }
 
 function registerUser(){
-    $seller_name = $_REQUEST['seller_username'];
+    $seller_name = $_REQUEST['seller_name'];
     $seller_username = $_REQUEST['seller_username'];
     $seller_password = $_REQUEST['seller_password'];
     $seller_phone = $_REQUEST['seller_phone'];

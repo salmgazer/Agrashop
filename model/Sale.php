@@ -10,7 +10,8 @@ include_once "adb.php";
          //check if sale is possible
          include_once "Product.php";
          $product = new Product();
-         $available = $product->getProductById($product_id)['product_quantity'];
+         $row = $product->getProductById($product_id);
+         $available = $row['product_quantity'];
          if($available < $quantity_sold){
              return "Can not complete sale. Only $available available";
          }
@@ -36,6 +37,6 @@ include_once "adb.php";
 }
 
 //$sale = new Sale();
-//echo $sale->addSale("898jhbh", 88, 8, (88 * 8), "0246119996", "salmut123");
+//echo $sale->addSale("898jhbh", 88, 2, (88 * 2), "0246119996", "salmut123");
 
 ?>
