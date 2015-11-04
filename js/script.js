@@ -3,7 +3,8 @@
  */
 
 //controller url
-var ctrUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/SalesManager/controller/controller.php?cmd=";
+//var ctrUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/SalesManager/controller/controller.php?cmd=";
+var ctrUrl = "controller/controller.php?cmd=";
 //stores id of selected book
 //var current_book_id = -10;
 //stores details of a selected book
@@ -29,6 +30,8 @@ var current_sale_cost_single;
 var current_sale_quantity;
 var current_sale_cost;
 var current_product;
+
+var sales = [];
 
 //user details
 var current_username;
@@ -201,13 +204,23 @@ function getProducts(){
     }
     var products = objResult.products;
     document.getElementById("books").innerHTML = "";
+    if(current_usertype == 'admin'){
     for(var i = 0; i < products.length; i++){
         var singleProduct = document.createElement("div");
         var product_id = products[i]['product_id'];
-
-        singleProduct.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><img src="" class="book_cover"/><h5 class="book-title">'+products[i]['product_name']+'</h5><h5>ID: '+product_id+'</h5><h6 class="publisher">Price: <span>Gh&#8373; '+products[i]['product_unit_price']+'</span></h6><h5 class="quantity">Quantity: <span>'+products[i]['product_quantity']+'</span></h5><div><button class="btn btn-default sell-book" onclick=sellProduct("'+product_id+'")>Sell Product</button></div></div></div>';
+        singleProduct.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><h5 class="book-title">'+products[i]['product_name']+'</h5><h5>ID: '+product_id+'</h5><h6 class="publisher">Price: <span>Gh&#8373; '+products[i]['product_unit_price']+'</span></h6><h5 class="quantity">Quantity: <span>'+products[i]['product_quantity']+'</span></h5><div><button class="btn btn-default sell-book" onclick=sellProduct("'+product_id+'")>Sell Product</button></div><div><button class="btn btn-default update-book" onclick=updateProduct("'+product_id+'")>Update Product</button></div></div></div>';
 
         document.getElementById("books").appendChild(singleProduct);
+    }
+    }
+    else if(current_usertype == 'seller'){
+       for(var i = 0; i < products.length; i++){
+        var singleProduct = document.createElement("div");
+        var product_id = products[i]['product_id'];
+        singleProduct.innerHTML = '<div class="col-sm-3" style="margin-bottom: 50px;"><div class="book-content"><h5 class="book-title">'+products[i]['product_name']+'</h5><h5>ID: '+product_id+'</h5><h6 class="publisher">Price: <span>Gh&#8373; '+products[i]['product_unit_price']+'</span></h6><h5 class="quantity">Quantity: <span>'+products[i]['product_quantity']+'</span></h5><div><button class="btn btn-default sell-book" onclick=sellProduct("'+product_id+'")>Sell Product</button></div></div></div>';
+
+        document.getElementById("books").appendChild(singleProduct);
+    } 
     }
 }
 
@@ -225,7 +238,8 @@ function getProductById(product_id){
 
 //function to start sell page of a single book
 function sellProduct(product_id){
-   // $("#sellBook").load("views/sellProduct.html"); 
+   document.getElementById("books").innerHTML = '';
+   document.getElementById("sellBook").style.visibility = 'visible'; 
    window.location.href = "#sellBook"; 
     var theProduct = getProductById(product_id);
     if(theProduct == "false"){
@@ -234,7 +248,7 @@ function sellProduct(product_id){
     }
     var myProd = theProduct[0];
     //alert(myProd['product_name']);
-    document.getElementById("seller_username_Sell").innerHTML = current_username;
+    document.getElementById("seller_username_sell").innerHTML = current_username;
     document.getElementById("product_name_sell").innerHTML = myProd['product_name'];
     document.getElementById("product_id_sell").innerHTML = myProd['product_id'];
     document.getElementById("product_quantity_sell").innerHTML = myProd['product_quantity'];
@@ -262,8 +276,9 @@ function addSale(){
         alert("could not add sale");
         return;
     }
-    if(buyer_phone.length >= 10){
-        var strUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/SalesManager/model/sendSMS.php?phone="+buyer_phone;
+    if(total_cost> 500 && buyer_phone.length >= 10){
+        //var strUrl = "http://cs.ashesi.edu.gh/class2016/salifu-mutaru/SalesManager/model/sendSMS.php?phone="+buyer_phone;
+        alert("You bought more than 500 cedis");
     }
     alert(objesult.message);
     getProducts();
@@ -272,3 +287,54 @@ function addSale(){
     document.getElementById("product_quantity_sell").innerHTML = myProd['product_quantity'];
 }
 
+function getSales(){
+    var strUrl = ctrUrl+"9";
+    var objResult = sendRequest(strUrl);
+    
+    if(objResult.result == 0){
+        return alert(objResult.message);
+    }
+    sales = objResult.sales;
+}
+
+//when update button is clicked on the home page
+function updateProduct(product_id){
+    document.getElementById("books").innerHTML = '';
+    document.getElementById("sellBook").innerHTML = '';
+    document.getElementById("updateProduct").style.visibility = 'visible';
+    window.location.href = "#updateProduct";
+    var theProduct = getProductById(product_id);
+    if(theProduct ==  "false"){
+        alert("could not get product");
+        return;
+    }
+    var myProd = theProduct[0];
+    document.getElementById("seller_username_update").innerHTML = current_username;
+    document.getElementById("product_name_update").innerHTML = myProd['product_name'];
+    document.getElementById("product_id_update").innerHTML = myProd['product_id'];
+    document.getElementById("product_quantity_update").innerHTML = myProd['product_quantity'];
+    document.getElementById("product_unit_price_update").innerHTML =myProd['product_unit_price'];
+    document.getElementById("new_price").value = myProd['product_unit_price'];
+    
+}
+
+//when update button is clicked for a single product
+function editProduct(){
+    var product_id = document.getElementById("product_id_update").innerHTML;
+    var new_price = $("#new_price").val();
+    var new_quantity = ($("#new_quantity").val() * 1) + (document.getElementById("product_quantity_update").innerHTML * 1);
+    
+    var strUrl = ctrUrl+"10&product_id="+product_id+"&new_price="+new_price+"&new_quantity="+new_quantity;
+    var objResult = sendRequest(strUrl);
+    
+    if(objResult.result == 0){
+        return alert(objResult.message);
+    }
+    alert(objResult.message);
+    
+    var myProd = getProductById(product_id)[0];
+    
+    document.getElementById("product_quantity_update").innerHTML = myProd['product_quantity'];
+    document.getElementById("product_unit_price_update").innerHTML =myProd['product_unit_price'];
+    
+}

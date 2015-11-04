@@ -37,6 +37,12 @@ switch($cmd) {
     case 8:
         signOut();
         break;
+    case 9:
+        getSales();
+        break;
+    case 10:
+        updateProduct();
+        break;
     default:
         echo '{"result":0, message:"unknown command"}';
         break;
@@ -174,6 +180,44 @@ function addSale(){
         return;
     }
     echo '{"result": 1, "message": "Sale has been recorded"}';
+    return;
+}
+
+function getSales(){
+    include_once "../model/Sale.php";
+    
+    $sales = new Sale();
+    $mysales = $sales->getSales();
+    
+    if(!$mysales){
+        echo '{"result": 0, "No sales"}';
+        return;
+    }
+    
+    echo '{"result": 1, "sales": [';
+    while($mysales){
+        echo json_encode($mysales);
+        $mysales = $sales->fetch();
+        if($mysales){
+            echo ",";
+        }
+    }
+    echo ']}';
+}
+
+function updateProduct(){
+    include_once "../model/Product.php";
+    
+    $product = new Product();
+    $product_id = $_REQUEST['product_id'];
+    $new_quantity = $_REQUEST['new_quantity'];
+    $new_price = $_REQUEST['new_price'];
+     
+    if(!$product->updateProduct($product_id, $new_quantity, $new_price)){
+        echo '{"result": 0, "message": "could not update product"}';
+        return;
+    }
+    echo '{"result": 0, "message": "product has been updated"}';
     return;
 }
 

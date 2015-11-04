@@ -11,13 +11,15 @@
     <script type="text/javascript" charset="utf-8"></script>-->
 
     <meta charset="UTF-8">
-    <title></title>
+    <title>Sales Manager Home</title>
+    <script type="text/javascript">
+      getUserDetails();
+    </script>
 </head>
-        <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+  <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -25,29 +27,31 @@
       </button>
       <a class="navbar-brand" href="./home.html">POS</a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="addProduct.html" id="addProductBtn">Add Product</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Update Product</a></li>
-          </ul>
-        </li>
+    <div class="navbar-collapse collapse" id="navbar-collapsible">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./addProduct.html">Add Product</a></li>
+        <li><a href="./sales.html">View Sales</a></li>
       </ul>
-      <form class="navbar-form navbar-left" role="search" id="searchArea">
-        <div class="">
-            <form class="form-group searchForm" id="searchForm">
-                <input class="form-control searchInput" name="searchInput" placeholder="search here" id="searchInput">
-            </form>
+           <div class="nav navbar-nav  navbar-right">
+        <li><a href="#" class="nav navbar-nav  navbar-right dropdown-toggle" data-toggle="dropdown">User</a>
+        <ul class="dropdown-menu">
+                <li><a href="#" id="signout">Sign Out</a></li>
+                <li><a href="#">Category 2</a></li>
+              </ul>
+        </li>
+      </div>
+      <form class="navbar-form navbar-right" id="searchForm">
+        <div class="form-group" style="display:inline;">
+          <div class="input-group"> 
+ 
+            <input type="text" class="form-control" name="searchInput" id="searchInput" placeholder="What are searching for?">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span> </span>
+          </div>
         </div>
-         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" id="signout">Sign Out</a></li>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+      </form>
+    </div>
+  </div>
 </nav>
     <div class="container">
         <div class="row">
@@ -63,6 +67,11 @@
 
         </div>
         <div class="container">
+          <!-- Add Product -->
+        <div class="addProductArea" id="addProductArea">
+            
+        </div>
+        
         <!--books-->
         <div id="books">
 
@@ -87,12 +96,12 @@
   </div>
 
 <div class="col-sm-8">
-	<h4 class="seller">Seller: <strong class="blue-text" id="seller_username_Sell"></strong></h4>
+	<h4 class="seller">Seller: <strong class="blue-text" id="seller_username_sell"></strong></h4>
 
-	<div class="form-group col-sm-6">
+	<div class="form-group col-sm-10">
       <label class="control-label" for="quantity_tosell">Quantity</label>
       <div class="controls">
-          <input name="quantity_tosell" id="quantity_tosell" type="number" value="" placeholder="0" class="form-control quantity" onkeyup="updateCurrentCost()" onchange="updateCurrentCost()"/>
+          <input name="quantity_tosell" id="quantity_tosell" type="number" min="1" value="" placeholder="0" class="form-control quantity" onkeyup="updateCurrentCost()" onchange="updateCurrentCost()"/>
       </div>
       <label class="control-label" for="buyer_phone">Buyer's phone</label>
       <div class="controls">
@@ -111,13 +120,50 @@
     </div>-->
 </div>
     </div>
+    <!-- End sell book -->
+    
+            <!--Update products-->
+        <div class="sellBook col-lg-12" id="updateProduct">
+            <div class="col-sm-2" style="margin-top: 30px;">
+    <div class="book-content">
+      <h5 class="book-title" id="product_name_update"></h5>
+      <h6 class="author"><span class="author-icon"> </span> ID: <span id="product_id_update"></span></h6>
+      <h5 class="quantity">Quantity: <span id="product_quantity_update"></span></h5>
+      <h6>Price: <span class="retail_price"> GH¢<strong id="product_unit_price_update"></strong></span></h6>
+    </div>
+  </div>
+
+<div class="col-sm-8">
+	<h4 class="seller">Seller: <strong class="blue-text" id="seller_username_update"></strong></h4>
+
+	<div class="form-group col-sm-10">
+      <label class="control-label" for="new_quantity">Quantity to add (negative number for reduction)</label>
+      <div class="controls">
+          <input name="new_quantity" id="new_quantity" type="number" min="1" value="" placeholder="0" class="form-control quantity" onkeyup="updateCurrentCost()" onchange="updateCurrentCost()"/>
+      </div>
+    </div>
+
+    <div class="form-group col-sm-10" id="sale_cost">
+    	<h3 class="blue-text">Current cost: GH¢ <b id="product_unit_price"></b></h3>
+      <label class="control-label" for="new_price">Update/Maintain current price</label>
+      <div class="controls">
+          <input name="new_price" id="new_price" type="number" min="1" value="" placeholder="0" class="form-control quantity" onkeyup="updateCurrentCost()" onchange="updateCurrentCost()"/>
+      </div>
+    </div>
+    <div class="col-sm-12 sellBtn">
+        <button class="btn btn-success add-to-cart" onclick=editProduct()>Update</button>
+    </div>
+</div>
+    </div>
+    <!-- End  update product -->
+    
 </div>
 <body>
 
     
     <script type="text/javascript">
         $(document).ready(function(){
-            getUserDetails();
+            //getUserDetails();
             getProducts();
            // $("#sellBook").load('views/sellBook.html');
         });

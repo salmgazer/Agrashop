@@ -67,6 +67,16 @@ class Product extends adb{
        $str_sql = "UPDATE product set product_quantity = $newQ WHERE product_id = '$product_id'";
        return $this->query($str_sql);
    }
+   
+   function setQuantity($product_id, $newQuantity){
+       $str_sql = "UPDATE product set product_quantity = $newQuantity WHERE product_id = $product_id";
+       return $this->query($str_sql);
+   }
+   
+   function updateProduct($product_id, $product_quantity, $product_unit_price){
+       $str_sql = "UPDATE product set product_quantity = $product_quantity, product_unit_price = $product_unit_price WHERE product_id = '$product_id'";
+       return $this->query($str_sql);
+   }
 
 }
 
@@ -77,3 +87,4 @@ class Product extends adb{
 
 //echo $prod->getProducts("apple")['product_name'];
 //echo $prod->updateQuantity("TV123JJ", 4);
+//echo $prod->updateProduct('898jhbh', 100, 100);
